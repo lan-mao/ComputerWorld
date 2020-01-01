@@ -9,7 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>DataStructure</module>
+        <module>OnlineJudge</module>
+        <module>DataStructure&amp;ampAlgorithm</module>
     </modules>
 
     <properties>

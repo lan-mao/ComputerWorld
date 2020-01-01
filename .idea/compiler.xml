@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DataStructure" />
+        <module name="DataStructure&amp;ampAlgorithm" />
+        <module name="OnlineJudge" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DataStructure" target="1.8" />
+      <module name="DataStructure&amp;Algorithm" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
