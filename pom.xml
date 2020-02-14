@@ -11,11 +11,12 @@
     <modules>
         <module>OnlineJudge</module>
         <module>DataStructure&amp;ampAlgorithm</module>
+        <module>JavaStudy</module>
     </modules>
 
     <properties>
         <file_encoding>uft-8</file_encoding>
-        <jdk_version>1.8</jdk_version>
+        <jdk_version>9</jdk_version>
     </properties>
     <build>
         <plugins>
@@ -30,5 +31,10 @@
                 </configuration>
             </plugin></plugins>
     </build>
+
+    <dependencies>
+
+
+    </dependencies>
 
 </project>
