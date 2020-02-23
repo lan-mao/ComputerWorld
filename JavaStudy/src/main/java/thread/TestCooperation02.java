@@ -2,7 +2,7 @@ package thread;
 
 /**
  * @Classname TestCooperation02
- * TODO 信号灯法实现
+ *  信号灯法实现
  * @Date 2020/02/09 15:56
  * @Created by lan-mao.top
  */

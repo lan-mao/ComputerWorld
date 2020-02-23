@@ -2,7 +2,7 @@ package thread;
 
 /**
  * @Classname TestCooperation01
- * TODO 使用管控法解决生产消费者模式
+ *  使用管控法解决生产消费者模式
  * @Date 2020/02/09 14:53
  * @Created by lan-mao.top
  */

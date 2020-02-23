@@ -1,0 +1,20 @@
+GET http://{{host}}/login?aing=192d9aj
+Accept: application/json
+
+aindiang=dianig&diang=dai&qq=123&qq=1234&qwe=
+###
+GET http://{{host}}/g?aing=192d9aj
+Accept: application/json
+
+aindiang=dianig&diang=dai&qq=123&qq=1234&qwe=
+###
+GET http://{{host}}/reg?aing=192d9aj
+Accept: application/json
+
+aindiang=dianig&diang=dai&qq=123&qq=1234&qwe=
+###
+GET http://{{host}}/qwe?aing=192d9aj
+Accept: application/json
+
+aindiang=dianig&diang=dai&qq=123&qq=1234&qwe=
+###

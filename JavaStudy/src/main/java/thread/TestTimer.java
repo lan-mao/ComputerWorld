@@ -5,7 +5,7 @@ import java.util.TimerTask;
 
 /**
  * @Classname TestTimer
- * TODO 使用Timer创建定时器
+ *  使用Timer创建定时器
  * @Date 2020/02/09 16:20
  * @Created by lan-mao.top
  */

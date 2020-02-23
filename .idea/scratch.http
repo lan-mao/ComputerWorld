@@ -1,0 +1,4 @@
+GET http://{{host}}/api/item?id=99
+Accept: application/json
+
+###

@@ -5,7 +5,13 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.3.100:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://192.168.3.100:3306/xiaohaizi</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="阿里云" uuid="eb068312-84d5-4486-a6c5-94ff885b6e3a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://39.96.170.153:3306</jdbc-url>
     </data-source>
   </component>
 </project>
