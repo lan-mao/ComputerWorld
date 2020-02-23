@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * TODO 封装表结构信息
+ *  封装表结构信息
  *
  * @Date 2020/02/18 23:27
  * @Created by lan-mao.top

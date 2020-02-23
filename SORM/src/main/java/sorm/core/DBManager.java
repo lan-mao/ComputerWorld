@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * TODO 根据配置信息，维持连接对象的管理（连接池）
+ *  根据配置信息，维持连接对象的管理（连接池）
  *  - 增加连接池处理
  * @Date 2020/02/18 23:06
  * @Created by lan-mao.top

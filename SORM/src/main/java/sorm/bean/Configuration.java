@@ -1,7 +1,7 @@
 package sorm.bean;
 
 /**
- * TODO 管理配置信息
+ *  管理配置信息
  *
  * @Date 2020/02/18 23:26
  * @Created by lan-mao.top

@@ -1,7 +1,7 @@
 package sorm.bean;
 
 /**
- * TODO 封装字段信息
+ *封装字段信息
  *
  * @Date 2020/02/18 23:12
  * @Created by lan-mao.top

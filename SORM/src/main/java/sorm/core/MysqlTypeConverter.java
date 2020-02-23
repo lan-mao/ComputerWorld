@@ -3,7 +3,7 @@ package sorm.core;
 /**
  * @Date 2020/02/19 12:43
  * @Created by lan-mao.top
- * TODO Mysql数据库数据类型转为Java数据类型
+ *  Mysql数据库数据类型转为Java数据类型
  */
 
 public class MysqlTypeConverter implements TypeConverter {

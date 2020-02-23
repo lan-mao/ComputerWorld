@@ -3,7 +3,7 @@ package sorm.core;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * TODO 提供返回Query对象的方法
+ *  提供返回Query对象的方法
  *
  * @Date 2020/02/18 22:58
  * @Created by lan-mao.top

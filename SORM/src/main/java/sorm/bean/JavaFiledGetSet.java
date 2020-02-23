@@ -3,7 +3,7 @@ package sorm.bean;
 /**
  * @Date 2020/02/19 19:12
  * @Created by lan-mao.top
- * TODO 封装了Java属性和get、set方法的源代码
+ *  封装了Java属性和get、set方法的源代码
  */
 
 public class JavaFiledGetSet {

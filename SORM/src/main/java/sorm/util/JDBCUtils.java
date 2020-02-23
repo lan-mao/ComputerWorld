@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 /**
- * TODO 封装常用的JDBC操作
+ *  封装常用的JDBC操作
  *
  * @Date 2020/02/18 23:07
  * @Created by lan-mao.top

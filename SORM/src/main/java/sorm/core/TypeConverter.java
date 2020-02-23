@@ -1,7 +1,7 @@
 package sorm.core;
 
 /**
- * TODO 负责Java数据类型和数据库数据类型的互相转化
+ *  负责Java数据类型和数据库数据类型的互相转化
  *
  * @Date 2020/02/18 22:59
  * @Created by lan-mao.top

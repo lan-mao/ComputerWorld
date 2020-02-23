@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TODO 负责管理数据库所有表结构与类结构之间的关系，并可以根据表结构生成类文件
+ *  负责管理数据库所有表结构与类结构之间的关系，并可以根据表结构生成类文件
  *  - 需要用Class加载类，但是一直找不到
  * @Date 2020/02/18 23:04
  * @Created by lan-mao.top
