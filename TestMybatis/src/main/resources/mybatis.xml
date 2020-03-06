@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--加载外部文件，resource属性代表配置文件。文件中的属性可以通过${key}方式得到-->
+    <properties resource="db.properties"></properties>
+    <settings>
+        <setting name="logImpl" value="LOG4J2"></setting>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <!--设置类的别名，如果不指定具体的别名，默认为类名，大小写不敏感。可以对某个包设置，其包下的所有类的别名都设置为类名-->
+    <typeAliases>
+        <typeAlias type="pojo.User"/>
+        <package name="pojo"/>
+    </typeAliases>
+    <!--指定使用哪个环境 default:指定使用的环境id-->
+    <environments default="dev">
+        <!--用于配置使用环境
+            id：环境的唯一识别码-->
+        <environment id="dev">
+            <!--事务管理器
+            type：用于设定MyBatis采用哪种方法管理事务
+                jdbc：与JDBC方式一样-->
+            <transactionManager type="JDBC" />
+            <!--配置数据源/连接池
+            type: 用于设置MyBatis是否采用连接池技术
+                POOLED表示采用连接池技术-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--使用resource参数代表的是映射文件位置-->
+<!--        <mapper resource="mapper/UserMapper.xml" />-->
+        <!--使用class代表的是接口位置-->
+<!--        <mapper class="mapper.UserMapper"/>-->
+        <!--使用package可以对包进行操作-->
+        <package name="mapper"/>
+<!--        <mapper resource="mapper/UserMapper_2.xml"/>-->
+    </mappers>
+
+</configuration>

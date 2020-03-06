@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="adcc4232-d24c-4b54-8afd-b7adc684eb4f" name="虚拟机Centos7" url="http://192.168.3.100">
+        <fileTransfer host="192.168.3.100" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="f771d5be-f341-4f04-9ceb-1eac2c8601db" name="阿里云Centos" url="http://39.96.170.153">
+        <fileTransfer host="39.96.170.153" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

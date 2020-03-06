@@ -7,10 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SORM" />
-        <module name="DataStructure&amp;ampAlgorithm" />
-        <module name="OnlineJudge" />
+        <module name="TestMybatis" />
+        <module name="DataStructureAndAlgorithm" />
         <module name="JavaStudy" />
+        <module name="CompilerTheory" />
+        <module name="OnlineJudge" />
+        <module name="SORM" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

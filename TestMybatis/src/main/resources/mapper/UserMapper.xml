@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：命名空间，一般写全限定名
+    MyBatis管理sql语句是通过namespace+id来定位的-->
+<mapper namespace="mapper.UserMapper">
+    <!--select标签用于编写查询语句
+            id： sql语句的唯一标识，类比于方法名
+            resultType： 用于设定返回结果的类型（全限定路径）
+                    如果返回一个集合，要写集合泛型的类型
+            parameterType： 用于传入一个参数，sql语句中的参数使用#｛｝获取
+                    #{} 其中参数可以是：
+                        index：索引，从0开始
+                        对象的属性值
+                        map对象的key值-->
+    <select id="getAll" resultType="User">
+        select * from user;
+    </select>
+
+    <select id="findById" resultType="user" parameterType="int">
+        select * from user where id = #{0}
+    </select>
+    <select id="findByUser" resultType="user">
+        select * from user where username=#{username} and password=#{password}
+    </select>
+    <insert id="insertUser" parameterType="user" >
+        insert into user(username,password) values (#{username} ,#{password})
+    </insert>
+    <update id="updateUser" parameterType="user">
+        update user set username = #{username},password=#{password} where id=#{id};
+    </update>
+    
+    <select id="listUserByUsernameAndPassword" resultType="user">
+        select * from user
+        <where>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+        </where>
+    </select>
+    <!--这种语句只能成立一个选项-->
+    <select id="listUserByUsernameOrPassword" resultType="user">
+        select * from user 
+        <where>
+            <choose>
+                <when test="username != null and username != ''">
+                    and username = #{username}
+                </when>
+                <when test="password != null and password != ''">
+                    and password = #{password}
+                </when>
+                <otherwise>
+                    and 1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+<!--    <update id="updateUserById">
+        update user
+        <set>
+            /*这里的id元素是为了避免出现set子句为空的情况*/
+            id = #{id},
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+        </set>
+        where id = #{id}
+    </update>-->
+    <update id="updateUserById">
+        update user
+        <trim prefix="set" prefixOverrides="" suffix="" suffixOverrides=",">
+            username = #{username},
+        </trim>
+        where id =#{id}
+    </update>
+
+    <select id="listLikeUsername" resultType="user">
+        select * from user
+        <where>
+            <if test="username != null and username != ''">
+                <bind name="username" value="'%' + username + '%'"/>
+                username = #{username}
+            </if>
+        </where>
+    </select>
+
+    <select id="listIn" resultType="user">
+        select
+         <include refid="allC"></include>
+         from user where id in
+        <foreach collection="list" open="(" separator="," close=")" index="index" item="item">
+            #{item}
+        </foreach>
+    </select>
+    
+    <sql id="allC">
+        id, username, password
+    </sql>
+</mapper>

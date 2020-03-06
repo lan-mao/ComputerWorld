@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SchoolMapper">
+
+    <resultMap id="getStudentContainClass" type="studentContainClass">
+        <id property="id" column="sid"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
+        <result property="cid" column="cid"/>
+        <association property="clazz" javaType="clazz">
+            <id property="id" column="cid"/>
+            <result property="name" column="cname"/>
+            <result property="room" column="room"/>
+        </association>
+    </resultMap>
+
+    <select id="listStudentContainClass" resultType="StudentContainClass">
+        select student.id id, student.name , age, sex, cid,class.id "clazz.id", class.name "clazz.name", room "clazz.room"
+        from student left join class on student.cid = class.id;
+    </select>
+
+    <resultMap id="getClassContainStudent" type="ClassContainStudent">
+        <id property="id" column="cid"/>
+        <result property="name" column="cname"/>
+        <result property="room" column="room"/>
+        <!--该标签代表一个集合，用于元素是集合元素的属性值-->
+        <collection property="students" javaType="list" ofType="student">
+            <id property="id" column="sid"/>
+            <result property="name" column="sname"/>
+            <result property="age" column="age"/>
+            <result property="sex" column="sex"/>
+            <result property="cid" column="cid"/>
+        </collection>
+    </resultMap>
+    <select id="listClassContainStudent" resultMap="getClassContainStudent">
+        select class.id cid, class.name cname, room ,student.id sid, student.name sname , age, sex
+        from student right join class on student.cid = class.id ;
+    </select>
+
+</mapper>
+        <!--    <resultMap id="studentContainClass" type="StudentContainClass">-->
+        <!--        <association property="student" >-->
+
+        <!--        </association>-->
+        <!--        <association property="clazz">-->
+
+        <!--        </association>-->
+        <!--    </resultMap>-->
+        <!--    <select id="listAllStudentAndClass" resultMap="studentContainClass">-->
+        <!--        select student.id sid, student.name name , age, sex, cid, class.name cname, room-->
+        <!--        from student inner join class on student.cid = class.id;-->
+        <!--    </select>-->
