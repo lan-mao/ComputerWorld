@@ -1,5 +1,3 @@
-package util;
-
 import cn.hutool.core.io.FileUtil;
 import it.sauronsoftware.jave.Encoder;
 import it.sauronsoftware.jave.EncoderException;

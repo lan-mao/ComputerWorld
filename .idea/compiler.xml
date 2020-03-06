@@ -10,9 +10,10 @@
         <module name="TestMybatis" />
         <module name="DataStructureAndAlgorithm" />
         <module name="JavaStudy" />
-        <module name="CompilerTheory" />
-        <module name="OnlineJudge" />
         <module name="SORM" />
+        <module name="OnlineJudge" />
+        <module name="Tools" />
+        <module name="CompilerTheory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

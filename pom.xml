@@ -15,6 +15,7 @@
         <module>SORM</module>
         <module>CompilerTheory</module>
         <module>TestMybatis</module>
+        <module>Tools</module>
     </modules>
 
     <properties>
