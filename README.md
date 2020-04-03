@@ -1,7 +1,8 @@
 # 计算机大世界
 
 - [CompilerTheory](CompilerTheory) 编译原理
-    - [project1.LexAnalyzer](CompilerTheory/src/main/java/project1.LexAnalyzer.java) 词法分析器
+    - [LexAnalyzer.java](CompilerTheory/src/main/java/cs316project/LexAnalyzer.java) 词法分析
+    - [Parser.java](CompilerTheory/src/main/java/cs316project/Parser.java) 文法分析
 - [DataStructureAndAlgorithm](DataStructureAndAlgorithm) 数据结构与算法
 - [JavaStudy](JavaStudy) Java学习时做的练习
 - [OnlineJudge](OnlineJudge) LeetCode等题库网站刷题
