@@ -2,8 +2,6 @@ package service;
 /**
  * Create Date 2020/03/04 9:17
  * Created by lan-mao.top
- * TODO 
- *  - 学校信息的服务层
  */
  
 public interface SchoolService {

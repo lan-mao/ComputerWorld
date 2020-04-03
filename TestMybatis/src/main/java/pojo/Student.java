@@ -6,8 +6,6 @@ import java.util.Objects;
 /**
  * Create Date 2020/03/03 21:09
  * Created by lan-mao.top
- * TODO 
- *  - Student表的实体类
  */
  
 public class Student implements Serializable {

@@ -10,8 +10,6 @@ import java.io.IOException;
 /**
  * Create Date 2020/02/29 14:46
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
  
 public class MybatisUtil {

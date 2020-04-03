@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="XMLConfigTest">
+    <!--先定义所有的appender-->
+    <appenders>
+        <!--这个输出控制台的配置-->
+        <console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %l%n \t %m%n"/>
+<!--            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>-->
+        </console>
+    </appenders>
+    <loggers>
+        <root level="info">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</Configuration>

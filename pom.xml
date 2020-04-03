@@ -16,6 +16,7 @@
         <module>CompilerTheory</module>
         <module>TestMybatis</module>
         <module>Tools</module>
+        <module>TestSpring</module>
     </modules>
 
     <properties>

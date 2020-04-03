@@ -6,7 +6,6 @@ import java.util.Objects;
 /**
  * Create Date 2020/02/26 20:05
  * Created by lan-mao.top
- * TODO
  */
 
 public class User implements Serializable {

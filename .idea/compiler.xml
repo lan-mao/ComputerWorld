@@ -10,16 +10,16 @@
         <module name="TestMybatis" />
         <module name="DataStructureAndAlgorithm" />
         <module name="JavaStudy" />
-        <module name="CompilerTheory" />
+        <module name="TestSpring" />
         <module name="OnlineJudge" />
         <module name="Tools" />
         <module name="SORM" />
+        <module name="CompilerTheory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JDKSource" target="13" />
       <module name="StudySpring" target="9" />
-      <module name="TestSpring" target="9" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

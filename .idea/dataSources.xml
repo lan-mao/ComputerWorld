@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://39.96.170.153:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Ubuntu-WSL" uuid="65a7d76d-05c1-4345-bc6c-1614d0330329">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306</jdbc-url>
+    </data-source>
   </component>
 </project>
