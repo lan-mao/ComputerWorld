@@ -3,15 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.StudentMapper">
-    <resultMap id="getStudentContainClass" type="StudentContainClass">
+    <resultMap expId="getStudentContainClass" type="StudentContainClass">
     </resultMap>
-    <select id="listAll" resultType="Student">
+    <select expId="listAll" resultType="Student">
         select * from student;
     </select>
-    <select id="getById" resultType="student" parameterType="int">
-        select * from student where id = #{id};
+    <select expId="getById" resultType="student" parameterType="int">
+        select * from student where expId = #{expId};
     </select>
-    <select id="listByCid" resultType="student" parameterType="int">
+    <select expId="listByCid" resultType="student" parameterType="int">
         select * from student where cid = #{cid};
     </select>
 </mapper>

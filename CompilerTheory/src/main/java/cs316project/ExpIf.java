@@ -1,5 +1,8 @@
 package cs316project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExpIf extends Exp {
     Exp exp1, exp2, exp3;
 
@@ -17,5 +20,29 @@ public class ExpIf extends Exp {
         exp2.printParseTree(indent1);
         IO.println(indent1 +indent1.length() + " else" );
         exp3.printParseTree(indent1);
+    }
+
+    /**
+     * todo state的增减，应在什么时候
+     * @param state
+     * @return
+     */
+    @Override
+    public Val eval(List<Val> state) {
+        Val b = exp1.eval(new ArrayList<>());
+        Val e1 = exp2.eval(new ArrayList<>());
+        Val e2 = exp3.eval(new ArrayList<>());
+        if (b instanceof ValError) {
+            return b;
+        } else if (b instanceof ValBool){
+            boolean temp = ((ValBool) b).getValue();
+            if (temp){
+                return e1;
+            } else {
+                return e2;
+            }
+        } else {
+            return new ValError("boolean condition of if-then-else evaluated to non-boolean value --> " + b);
+        }
     }
 }

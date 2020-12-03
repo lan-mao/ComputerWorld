@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--加载jdbc配置-->
+    <context:property-placeholder location="jdbc.properties"/>
+
+    <!--注册c3p0-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--注册AccountDao-->
+    <bean id="accountDaoImpl" class="top.lan_mao.computer_world.spring.dao.impl.AccountDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="fundDaoImpl" class="top.lan_mao.computer_world.spring.dao.impl.FundDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--注册service-->
+    <bean id="bankService" class="top.lan_mao.computer_world.spring.service.impl.BankServiceImpl">
+        <property name="accountDao" ref="accountDaoImpl"/>
+        <property name="fundDao" ref="fundDaoImpl"/>
+    </bean>
+
+    <!--注册事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--配置数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--注册事务通知-->
+    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">
+        &lt;!&ndash;连接点方法的事务属性，并不是连接点&ndash;&gt;
+        <tx:attributes>
+            &lt;!&ndash;name=配置对应的方法； isolation=事务隔离级别 propagation=事务传播行为 read-only=方法只是对数据库的查询，会对事务进行优化； rollback-for=出现哪个异常时进行回滚； no-rollback-fro=对那个异常不进行回滚； timeout=事务默认超时时限&ndash;&gt;
+            <tx:method name="open*" isolation="DEFAULT" propagation="REQUIRED" />
+            <tx:method name="buy*" isolation="DEFAULT" propagation="REQUIRED" rollback-for="BankException"/>
+        </tx:attributes>
+    </tx:advice>
+    &lt;!&ndash;AOP配置&ndash;&gt;
+
+    <aop:config>
+        <aop:pointcut id="bankPointcut" expression="execution(* *..service.*.buyFund(..))"/>
+        &lt;!&ndash;使用顾问标签&ndash;&gt;
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="bankPointcut"/>
+    </aop:config>-->
+
+    <!--事务注解扫描器-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

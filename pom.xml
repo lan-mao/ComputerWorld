@@ -16,12 +16,17 @@
         <module>CompilerTheory</module>
         <module>TestMybatis</module>
         <module>Tools</module>
-        <module>TestSpring</module>
+        <module>SpringMVC</module>
+        <module>Spring</module>
+        <module>BiliBiliLive</module>
+        <module>Ncm2Mp3</module>
+        <module>GUITest</module>
+        <module>GUIStudy</module>
     </modules>
 
     <properties>
         <file_encoding>uft-8</file_encoding>
-        <jdk_version>9</jdk_version>
+        <jdk_version>11</jdk_version>
     </properties>
     <build>
         <plugins>
@@ -38,43 +43,14 @@
     </build>
 
     <dependencies>
-        <!-- JUnit5单元测试框架 -->
- <!--       <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <version>1.6.0</version>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
-        </dependency>-->
-<!--        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.5.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>1.5.2</version>
-            <scope>test</scope>
-        </dependency>-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
 </project>

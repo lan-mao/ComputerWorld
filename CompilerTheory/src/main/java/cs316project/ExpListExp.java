@@ -1,5 +1,8 @@
 package cs316project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExpListExp extends ExpList {
     Exp exp;
     ExpList expList;
@@ -13,5 +16,16 @@ public class ExpListExp extends ExpList {
         IO.println(indent +indent.length() + " <exp list>");
         exp.printParseTree(indent1);
         expList.printParseTree(indent1);
+    }
+
+    @Override
+    public Val eval(List<Val> state) {
+        List<Val> temp = new ArrayList<>();
+        if (!(expList instanceof ExpListEmpty)) {
+            Val valExpList = expList.eval(temp);
+        }
+        Val valExp = exp.eval(temp);
+        state.addAll(temp);
+        return valExp;
     }
 }

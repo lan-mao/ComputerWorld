@@ -17,8 +17,8 @@
     <!--指定使用哪个环境 default:指定使用的环境id-->
     <environments default="dev">
         <!--用于配置使用环境
-            id：环境的唯一识别码-->
-        <environment id="dev">
+            expId：环境的唯一识别码-->
+        <environment expId="dev">
             <!--事务管理器
             type：用于设定MyBatis采用哪种方法管理事务
                 jdbc：与JDBC方式一样-->

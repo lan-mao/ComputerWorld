@@ -94,7 +94,6 @@ public class LexAnalyzer {
         nextState[State.E.ordinal()]['+'] = State.EPlusMinus;
         nextState[State.E.ordinal()]['-'] = State.EPlusMinus;
 
-
     }
 
     public static void initKeywordMap() {
@@ -174,7 +173,6 @@ public class LexAnalyzer {
                 sb.append(charTemp);
             }
         }
-
     }
 
     public static void main(String[] args) throws IOException {

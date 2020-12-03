@@ -15,7 +15,12 @@
 - [SORM](SORM) 一个简易的数据库框架
 - [TestMybatis](TestMybatis) MyBatis学习过程中的练习
 - [Tools](Tools) 学习时创建的一些工具类
-    - [TestJAVE](Tools/src/main/java/TestJAVE.java) 计算一个文件夹中的所有视频时长总和
+    - [top.lan_mao.util.TestJAVE](Tools/src/main/java/top.lan_mao.util.TestJAVE.java) 计算一个文件夹中的所有视频时长总和
 - [知识图谱](resources)
     - MySql
     - 计算机大世界
+
+此项目受到 [JetBrains](https://www.jetbrains.com/zh-cn/?from=ComputerWorld) 的支持，有开源项目的可以行动起来了，支持正版。
+
+开源项目正版许可证申请地址：[https://www.jetbrains.com/zh-cn/opensource/](https://www.jetbrains.com/zh-cn/opensource/)
+

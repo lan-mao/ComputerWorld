@@ -6,7 +6,7 @@
     MyBatis管理sql语句是通过namespace+id来定位的-->
 <mapper namespace="mapper.UserMapper">
     <!--select标签用于编写查询语句
-            id： sql语句的唯一标识，类比于方法名
+            expId： sql语句的唯一标识，类比于方法名
             resultType： 用于设定返回结果的类型（全限定路径）
                     如果返回一个集合，要写集合泛型的类型
             parameterType： 用于传入一个参数，sql语句中的参数使用#｛｝获取
@@ -14,24 +14,24 @@
                         index：索引，从0开始
                         对象的属性值
                         map对象的key值-->
-    <select id="getAll" resultType="User">
+    <select expId="getAll" resultType="User">
         select * from user;
     </select>
 
-    <select id="findById" resultType="user" parameterType="int">
-        select * from user where id = #{0}
+    <select expId="findById" resultType="user" parameterType="int">
+        select * from user where expId = #{0}
     </select>
-    <select id="findByUser" resultType="user">
+    <select expId="findByUser" resultType="user">
         select * from user where username=#{username} and password=#{password}
     </select>
-    <insert id="insertUser" parameterType="user" >
+    <insert expId="insertUser" parameterType="user" >
         insert into user(username,password) values (#{username} ,#{password})
     </insert>
-    <update id="updateUser" parameterType="user">
-        update user set username = #{username},password=#{password} where id=#{id};
+    <update expId="updateUser" parameterType="user">
+        update user set username = #{username},password=#{password} where expId=#{expId};
     </update>
     
-    <select id="listUserByUsernameAndPassword" resultType="user">
+    <select expId="listUserByUsernameAndPassword" resultType="user">
         select * from user
         <where>
             <if test="username != null and username != ''">
@@ -43,7 +43,7 @@
         </where>
     </select>
     <!--这种语句只能成立一个选项-->
-    <select id="listUserByUsernameOrPassword" resultType="user">
+    <select expId="listUserByUsernameOrPassword" resultType="user">
         select * from user 
         <where>
             <choose>
@@ -60,11 +60,11 @@
         </where>
     </select>
 
-<!--    <update id="updateUserById">
+<!--    <update expId="updateUserById">
         update user
         <set>
             /*这里的id元素是为了避免出现set子句为空的情况*/
-            id = #{id},
+            expId = #{expId},
             <if test="username != null and username != ''">
                 username = #{username},
             </if>
@@ -72,17 +72,17 @@
                 password = #{password},
             </if>
         </set>
-        where id = #{id}
+        where expId = #{expId}
     </update>-->
-    <update id="updateUserById">
+    <update expId="updateUserById">
         update user
         <trim prefix="set" prefixOverrides="" suffix="" suffixOverrides=",">
             username = #{username},
         </trim>
-        where id =#{id}
+        where expId =#{expId}
     </update>
 
-    <select id="listLikeUsername" resultType="user">
+    <select expId="listLikeUsername" resultType="user">
         select * from user
         <where>
             <if test="username != null and username != ''">
@@ -92,16 +92,16 @@
         </where>
     </select>
 
-    <select id="listIn" resultType="user">
+    <select expId="listIn" resultType="user">
         select
          <include refid="allC"></include>
-         from user where id in
+         from user where expId in
         <foreach collection="list" open="(" separator="," close=")" index="index" item="item">
             #{item}
         </foreach>
     </select>
     
-    <sql id="allC">
-        id, username, password
+    <sql expId="allC">
+        expId, username, password
     </sql>
 </mapper>

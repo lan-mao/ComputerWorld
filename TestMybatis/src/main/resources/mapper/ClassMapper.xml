@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.ClassMapper">
-    <select id="getById" resultType="Clazz" parameterType="int">
-        select * from test_mybatis.class where class.id = #{id};
+    <select expId="getById" resultType="Clazz" parameterType="int">
+        select * from test_mybatis.class where class.expId = #{expId};
     </select>
-    <select id="listAll" resultType="Clazz">
+    <select expId="listAll" resultType="Clazz">
         select * from test_mybatis.class ;
     </select>
 </mapper>

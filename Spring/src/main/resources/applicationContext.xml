@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
+       http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+    <bean id="doSomethingService" class="top.lan_mao.computer_world.spring.service.impl.DoSomethingServiceImpl" >
+        <property name="age" value="100"/>
+        <property name="name" ><null/></property>
+        <property name="person" ref="person"/>
+    </bean>
+    <bean id="person" class="top.lan_mao.computer_world.spring.bean.Person"/>
+    <!--注册切面，前置通知-->
+    <bean id="methodBeforeAdvice" class="top.lan_mao.computer_world.spring.aop.MethodBeforeAdviceOnService"/>
+    <!--注册代理工厂-->
+    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--这里需要注意，property元素的name是有具体的规定的，而对应的值也有具体规定-->
+        <!--指定代理目标对象-->
+        <property name="target" ref="doSomethingService"/>
+        <!--指定目标类实现的所有接口-->
+        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <!--指定切面-->
+        <property name="interceptorNames" value="methodBeforeAdvice"/>
+    </bean>
+
+    <!--注册后置通知-->
+    <bean id="methodAfterAdvice" class="top.lan_mao.computer_world.spring.aop.ServiceMethodAfterReturningAdvice"/>
+    <!--注册代理工厂-->
+    <bean id="afterProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="doSomethingService"/>
+        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interceptorNames" value="methodAfterAdvice"/>
+    </bean>
+
+    <bean id="interceptorMethodAdvice" class="top.lan_mao.computer_world.spring.aop.ServiceMethodInterceptor"/>
+    <bean id="interceptorProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="doSomethingService"/>
+        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interceptorNames" value="interceptorMethodAdvice"/>
+    </bean>
+
+    <bean id="throwsMethodAdvice" class="top.lan_mao.computer_world.spring.aop.ServiceMethodThrowsAdvice"/>
+    <bean id="throwsProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="doSomethingService"/>
+        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interceptorNames" value="throwsMethodAdvice"/>
+    </bean>
+
+</beans>

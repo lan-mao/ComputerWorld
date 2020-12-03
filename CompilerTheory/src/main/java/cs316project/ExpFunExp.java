@@ -1,5 +1,7 @@
 package cs316project;
 
+import java.util.List;
+
 public class ExpFunExp extends Exp {
     FunExp funExp;
 
@@ -14,5 +16,11 @@ public class ExpFunExp extends Exp {
         IO.println(indent1 +indent1.length() + " (" );
         funExp.printParseTree(indent1);
         IO.println(indent1 +indent1.length() + " )" );
+    }
+
+
+    @Override
+    public Val eval(List<Val> state) {
+        return funExp.eval(state);
     }
 }

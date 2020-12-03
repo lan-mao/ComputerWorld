@@ -1,5 +1,7 @@
 package cs316project;
 
+import java.util.List;
+
 public class ExpId extends Exp {
     String id;
 
@@ -12,5 +14,10 @@ public class ExpId extends Exp {
         String indent1 = indent + " ";
         IO.println(indent +indent.length() + " <exp>");
         IO.println(indent1 +indent1.length() + " " + id );
+    }
+
+    @Override
+    public Val eval(List<Val> state) {
+        return new ValError("ID error");
     }
 }

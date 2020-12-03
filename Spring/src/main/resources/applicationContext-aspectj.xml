@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
+       http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <bean id="doSomethingService2" class="top.lan_mao.computer_world.spring.service.impl.DoSomethingServiceImpl" >
+        <property name="age" value="100"/>
+        <property name="name" ><null/></property>
+        <property name="person" ref="person2"/>
+    </bean>
+    <bean id="person2" class="top.lan_mao.computer_world.spring.bean.Person"/>
+
+    <!--注册切面-->
+    <bean id="myAspect" class="top.lan_mao.computer_world.spring.aspects.MyAspect"/>
+    <!--注册自动代理-->
+<!--    <aop:aspectj-autoproxy/>-->
+
+<!--注册切面（不使用注解）-->
+<bean id="myAspectByXML" class="top.lan_mao.computer_world.spring.aspects.MyAspectByXML"/>
+<!--注册AOP配置-->
+<aop:config>
+    <!--注册切入点-->
+    <aop:pointcut id="doSomethingMethod" expression="execution(* *..service.*.doSomething(..))"/>
+    <aop:pointcut id="doNothingMethod" expression="execution(* *..service.*.doNothing(..))"/>
+    <aop:pointcut id="doErrorMethod" expression="execution(* *..service.*.doError(..))"/>
+
+    <!--注册切面-->
+    <aop:aspect ref="myAspectByXML">
+        <aop:before method="before" pointcut-ref="doSomethingMethod"/>
+        <aop:around method="around" pointcut-ref="doSomethingMethod"/>
+        <aop:after method="after" pointcut-ref="doSomethingMethod"/>
+        <aop:after-returning method="afterReturning" pointcut-ref="doSomethingMethod" returning="result"/>
+    </aop:aspect>
+
+</aop:config>
+</beans>
