@@ -1,4 +1,4 @@
-package top.lan_mao.util;
+package top.lan_mao.tools;
 
 import cn.hutool.core.io.FileUtil;
 import it.sauronsoftware.jave.Encoder;

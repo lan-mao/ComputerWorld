@@ -1,4 +1,4 @@
-package top.lan_mao.util;
+package top.lan_mao.tools;
 
 /**
  * Create Date 2020/11/30 10:12:30 <br>
@@ -64,10 +64,6 @@ public class TimeUtil {
         return result.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(formatTimeFromMinutes(337.34));
-    }
-
     /**
      * 格式化一个以小时为单位的时间值，精确到分钟
      * @param time 小时.分钟
@@ -91,6 +87,7 @@ public class TimeUtil {
             result.append(minutes).append("分");
         return result.toString();
     }
+
     /**
      * 格式化一个以天为单位的时间值，精确到小时
      * @param time 天.小时
@@ -111,4 +108,8 @@ public class TimeUtil {
         return result.toString();
     }
 
+    public static void main(String[] args) {
+        System.out.println(formatTimeFromMinutes(1033.59));
+        System.out.println(17*60+13+0.59);
+    }
 }

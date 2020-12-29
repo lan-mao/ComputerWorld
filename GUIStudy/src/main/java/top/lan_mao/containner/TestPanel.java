@@ -1,4 +1,4 @@
-package top.lan_mao.lesson01;
+package top.lan_mao.containner;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;

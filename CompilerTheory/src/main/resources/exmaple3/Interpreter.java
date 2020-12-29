@@ -1,6 +1,6 @@
 package exmaple3;
 
-import java.util.*;
+import java.util.HashMap;
 
 public abstract class Interpreter extends Parser
 {

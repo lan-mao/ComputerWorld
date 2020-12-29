@@ -49,7 +49,7 @@ The functions "driver", "getToken", "setLex" remain the same.
 **/
 
 
-import java.util.*;
+import java.util.HashMap;
 
 public abstract class LexAnalyzer extends IO
 {

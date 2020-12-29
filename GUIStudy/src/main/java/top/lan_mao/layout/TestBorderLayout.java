@@ -1,4 +1,4 @@
-package top.lan_mao.lesson01;
+package top.lan_mao.layout;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -25,8 +25,9 @@ public class TestBorderLayout {
         frame.add(north, BorderLayout.NORTH);
         frame.add(center, BorderLayout.CENTER);
 
-        frame.setVisible(true);
         frame.setSize(200, 200);
+        //frame.pack();
+        frame.setVisible(true);
 
         frame.addWindowListener(new WindowAdapter() {
             @Override

@@ -18,10 +18,9 @@
         <module>Tools</module>
         <module>SpringMVC</module>
         <module>Spring</module>
-        <module>BiliBiliLive</module>
         <module>Ncm2Mp3</module>
-        <module>GUITest</module>
         <module>GUIStudy</module>
+        <module>JavaSE</module>
     </modules>
 
     <properties>
