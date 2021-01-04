@@ -18,7 +18,6 @@
         <module>Tools</module>
         <module>SpringMVC</module>
         <module>Spring</module>
-        <module>Ncm2Mp3</module>
         <module>GUIStudy</module>
         <module>JavaSE</module>
     </modules>

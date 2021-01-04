@@ -12,7 +12,7 @@
     <artifactId>TestMybatis</artifactId>
 
     <properties>
-        <log4j2>2.13.0</log4j2>
+        <log4j2>2.13.3</log4j2>
     </properties>
     <dependencies>
         <dependency>
