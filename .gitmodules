@@ -1,0 +1,6 @@
+[submodule "Blog/themes/obsidian"]
+	path = Blog/themes/obsidian
+	url = https://github.com/TriDiamond/hexo-theme-obsidian.git
+[submodule "Ncm2Mp3"]
+	path = Ncm2Mp3
+	url = https://github.com/thinkAfCod/ncmdump.git
