@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 懒猫
+title: 欢迎欢迎！！热烈欢迎o(*^▽^*)┛
 subtitle: ''
 description: ''
 keywords:
-author: <a href="https://github.com/lan-mao" title="github" target="_blank" rel="noopener">懒猫</a>
+author: lan-mao
 language: zh-CN
 timezone: ''
 
@@ -37,7 +37,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false # Transform title into title case
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
@@ -80,7 +80,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: mtime
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -97,7 +97,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: obsidian
-# theme: landscape
+#theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -107,16 +107,32 @@ deploy:
     branch: master
     message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
   - type: git
-    repo: https://git.dev.tencent.com/henghengya/henghengya.git
-    branch: master
-    message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
-  - type: git
     repo: https://gitee.com/lan-mao/lan-mao.git
     branch: master
     message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+#  - type: git
+#    repo: https://git.dev.tencent.com/henghengya/henghengya.git
+#    branch: master
+#    message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+
 
 # 搜索功能
 search:
   path: search.xml
   field: post
   content: true
+
+# 表情符号功能
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+# 图片懒加载
+lazyload:
+  enable: true
+  onlypost: true
+  loadingImg: /loading.gif
+  isSPA: true

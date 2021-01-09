@@ -27,7 +27,5 @@
 
 - Github：[lan-mao](https://github.com/lan-mao)
 - 掘金：[lan_mao](https://juejin.im/user/57da2824a0bb9f0058849387)
-- 邮箱：<maxin9842@163.com>
+- 邮箱：<mailto:maxin9842@163.com>
 - 微信公众号：Super_Builder
-
-<img src="https://blog-source-1258302212.cos.ap-beijing.myqcloud.com/20200108195503_dc35dac5c0d673f9e923020fc9b20eee.png" width="200" height="260" style="margin: 0 auto"/>

@@ -1,11 +1,12 @@
-<% if (theme.gitalk.enable == true) { %>
-    <%- css(['https://lan-mao.gitee.io/css/gitalk.min.css'])%>
-    <%- js(['https://lan-mao.gitee.io/js/gitalk.min.js'])%>
-<% } %>
-<%- js(['https://lan-mao.gitee.io/js/jquery.min.js', 'https://lan-mao.gitee.io/js/plugin.js', 'https://lan-mao.gitee.io/js/obsidian.js', 'https://lan-mao.gitee.io/js/jquery.truncate.js', 'https://lan-mao.gitee.io/js/search.js'])%>
-<%- js(['https://lan-mao.gitee.io/js/typed.min.js']) %>
-<%- js(['https://lan-mao.gitee.io/js/md5.min.js']) %>
-<%- js(['https://lan-mao.gitee.io/js/social-share.min.js']) %>
+<!-- 这里的gitalk引用是更新之后的版本 -->
+<% if (theme.gitalk.enable == true) { %> <%-
+css(['https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.css'])%> <%-
+js(['https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js'])%> <% } %> <%-
+js(['//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', 'js/plugin.js', 'js/obsidian.js',
+'js/jquery.truncate.js', 'js/search.js'])%> <%-
+js(['//cdn.bootcss.com/typed.js/2.0.10/typed.min.js']) %> <%-
+js(['//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js']) %> <%-
+js(['//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js']) %>
 
 <script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
 <% theme.codemirror.modes.forEach(function (mode) { %> <%-
@@ -64,8 +65,8 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
   }
 </script>
 
-<% if (theme.valine.enable) { %> <%- js(['https://lan-mao.gitee.io/js/Valine.min.js']) %>
-    <script>
+<% if (theme.valine.enable) { %> <%- js(['//unpkg.com/valine/dist/Valine.min.js']) %>
+<script>
   var valine = new Valine();
 
   function initValine(path) {
