@@ -1,6 +1,4 @@
-package top.lan_mao.List;
-
-import org.junit.jupiter.api.Test;
+package top.lan_mao.list;
 
 /**
  * Create Date 2020/03/09 11:19
@@ -16,7 +14,6 @@ public class YosefCycleLinkList {
      * @param n n个人
      * @param m 第m个人杀掉
      */
-    @Test
     public static void yosef(int n,int m) {
         YosefNode firstNode = new YosefNode();
         YosefNode pointerNode = firstNode;
@@ -48,7 +45,6 @@ public class YosefCycleLinkList {
 
     public static void main(String[] args) {
         yosef(6, 5);
-
     }
 }
 

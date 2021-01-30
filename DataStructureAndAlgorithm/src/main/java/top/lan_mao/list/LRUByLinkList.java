@@ -1,4 +1,4 @@
-package top.lan_mao.List;
+package top.lan_mao.list;
 /**
  * Create Date 2020/03/09 11:13
  * Created by lan-mao.top

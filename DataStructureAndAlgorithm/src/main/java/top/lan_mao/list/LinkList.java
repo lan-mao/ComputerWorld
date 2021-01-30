@@ -1,4 +1,4 @@
-package top.lan_mao.List;
+package top.lan_mao.list;
 
 import java.util.Arrays;
 
