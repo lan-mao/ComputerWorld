@@ -3,10 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import top.lan_mao.sort.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.StringTokenizer;
 
 /**
  * Create Date 2021/01/16 20:14:18 <br>
@@ -129,13 +126,13 @@ public class SortTest {
     @Test
     @DisplayName("测试Java原有的排序算法")
     void sortTests() {
-        LinkedList linkedList = new LinkedList();
-        ArrayList arrayList = new ArrayList();
-        Object[] array = new Object[100];
-        Arrays.sort(array);
-        arrayList.sort();
-        String a = new String();
-        StringTokenizer stringTokenizer = new StringTokenizer("");
+        //LinkedList linkedList = new LinkedList();
+        //ArrayList arrayList = new ArrayList();
+        //Object[] array = new Object[100];
+        //Arrays.sort(array);
+        //arrayList.sort();
+        //String a = new String();
+        //StringTokenizer stringTokenizer = new StringTokenizer("");
 
     }
 
