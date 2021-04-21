@@ -60,7 +60,6 @@ public class BankServiceImpl implements BankService {
         if (random > 1) {
             throw new BankException();
         }
-        java.util.Collection
         fundDao.updateFund(fundName,count);
     }
 }

@@ -1,5 +1,6 @@
 package lambda;
 
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -10,10 +11,10 @@ import java.util.Comparator;
 /**
  * Create Date 2020/09/15 16:31
  * Created by lan-mao.top
- * TODO 
  *  - 这是Comparator接口的lambda表达式测试
  */
- 
+
+
 public class ComparatorTest {
 
     static Person[] people = new Person[5];

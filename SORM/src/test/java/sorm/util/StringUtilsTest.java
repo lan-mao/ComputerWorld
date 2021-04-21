@@ -1,20 +1,22 @@
 package sorm.util;
 
+import org.junit.jupiter.api.Test;
+
 class StringUtilsTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void toUpperCamelCase() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void toLowerCamelCase() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void javaPath2FilePath() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void covertFromJavaCamelCase() {
     }
 }
