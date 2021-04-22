@@ -20,6 +20,7 @@ import java.sql.SQLException;
 public class JdbcTemplateIngredientRepository implements IngredintRepository{
     private final JdbcTemplate jdbcTemplate;
 
+
     @Override
     public Iterable<Ingredient> findAll() {
         return jdbcTemplate.query("select id, name, type from ingredient", this::mapRowToIngredient);
