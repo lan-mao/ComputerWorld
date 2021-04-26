@@ -1,16 +1,10 @@
 package LeetCode;
 
+import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
- * @Classname LeetCodeUtil
- *
- * @Date 2020/02/06 20:53
- * @Created by lan-mao.top
+ * @author lan-mao.top
  */
 
 public class LeetCodeUtil {
@@ -32,7 +26,7 @@ public class LeetCodeUtil {
 
 
     public static int[][] stringToInt2dArray(String input) {
-        JsonArray jsonArray = JsonArray.readFrom(input);
+        JsonArray jsonArray = Json.parse(input).asArray();
         if (jsonArray.size() == 0) {
             return new int[0][0];
         }
@@ -44,16 +38,24 @@ public class LeetCodeUtil {
         }
         return arr;
     }
+    public static String[] stringToStringArray(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        String[] arr = new String[jsonArray.size()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = jsonArray.get(i).asString();
+        }
+        return arr;
+    }
 
     public static String integerArrayToString(int[] nums, int length) {
         if (length == 0) {
             return "[]";
         }
 
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for(int index = 0; index < length; index++) {
             int number = nums[index];
-            result += Integer.toString(number) + ", ";
+            result.append(number).append(", ");
         }
         return "[" + result.substring(0, result.length() - 2) + "]";
     }
@@ -62,41 +64,4 @@ public class LeetCodeUtil {
         return integerArrayToString(nums, nums.length);
     }
 
-    public static void rootInt2dArrays (Solution solution)  {
-        try {
-            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            String line;
-            while ((line = in.readLine()) != null) {
-                int[][] matrix = stringToInt2dArray(line);
-                solution.solution(matrix);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    /**
-     * 用于需要输入int数组的方法
-     * @param solution
-     * @throws IOException
-     */
-    public static void rootIntArrays(Solution solution) {
-        try {
-            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            String line;
-            while ((line = in.readLine()) != null) {
-                int[] nums = stringToIntegerArray(line);
-                solution.solution(nums);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-interface Solution{
-    /**
-     * 运行输出操作
-     * @param param 传入数组等内容，需要强制类型转换
-     */
-    void solution(Object... param);
 }

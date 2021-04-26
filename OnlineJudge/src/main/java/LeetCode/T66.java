@@ -1,19 +1,20 @@
 package LeetCode;
 
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
- * @Classname T66
+ * @author lan-mao.top
  * [加一]()
- * @Date 2020/02/06 21:25
- * @Created by lan-mao.top
  */
 
-public class T66 implements Solution {
-    public int[] plusOne(int[] digits) {
+public class T66 {
+    public static int[] plusOne(int[] digits) {
         int[] answer = {1};
-        if (digits[0] == 0)
+        if (digits[0] == 0) {
             return answer;
+        }
         boolean add = false;//记录是否需要进位
         if (++digits[digits.length-1] ==10){
             add = true;
@@ -36,13 +37,18 @@ public class T66 implements Solution {
         }
         return digits;
     }
-    @Override
-    public void solution(Object... param) {
-        int[] digits = (int[]) param[0];
-        System.out.println(Arrays.toString(plusOne(digits)));
-    }
 
-    public static void main(String[] args) {
-        LeetCodeUtil.rootIntArrays(new T66());
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            int[] digits = LeetCodeUtil.stringToIntegerArray(line);
+
+            int[] ret = plusOne(digits);
+
+            String out = LeetCodeUtil.integerArrayToString(ret);
+
+            System.out.print(out);
+        }
     }
 }

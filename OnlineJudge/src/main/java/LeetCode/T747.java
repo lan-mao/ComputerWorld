@@ -1,14 +1,16 @@
 package LeetCode;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
- * @Classname T747
  * 至少是其他数字两倍的最大数
- * @Date 2020/02/06 20:51
- * @Created by lan-mao.top
+ * @author lan-mao.top
  */
 
-public class T747 implements Solution{
-    public int dominantIndex(int[] nums) {
+public class T747{
+    public static int dominantIndex(int[] nums) {
         int max = 0;
         int index = 0;
         int doubleMax = 0;
@@ -31,13 +33,18 @@ public class T747 implements Solution{
         }
         return -1;
     }
-    @Override
-    public void solution(Object... param) {
-        int[] nums = (int[]) param[0];
-        System.out.println(dominantIndex(nums));
-    }
 
-    public static void main(String[] args) {
-        LeetCodeUtil.rootIntArrays(new T747());
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            int[] nums = LeetCodeUtil.stringToIntegerArray(line);
+
+            int ret = dominantIndex(nums);
+
+            String out = String.valueOf(ret);
+
+            System.out.print(out);
+        }
     }
 }

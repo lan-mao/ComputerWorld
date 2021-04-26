@@ -1,17 +1,17 @@
 package LeetCode;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
- * @Classname T724
  * 寻找数组的中心索引
- * @Date 2020/02/06 20:15
- * @Created by lan-mao.top
+ * @author lan-mao.top
  */
 
-public class T724 implements Solution{
+public class T724{
 
-    public int pivotIndex(int[] nums) {
+    public static int pivotIndex(int[] nums) {
         int sum = 0;
         for (int num : nums) {
             sum+=num;
@@ -19,20 +19,22 @@ public class T724 implements Solution{
         int sumLeft = 0;
         int size = nums.length;
         for (int i =0;i < size; i++){
-            if (sumLeft == sum - sumLeft - nums[i])
+            if (sumLeft == sum - sumLeft - nums[i]) {
                 return i;
+            }
             sumLeft += nums[i];
         }
         return -1;
     }
 
-    @Override
-    public void solution(Object... param) {
-        int[] nums = (int[]) param[0];
-        System.out.println(pivotIndex(nums));
-    }
-
     public static void main(String[] args) throws IOException {
-        LeetCodeUtil.rootIntArrays(new T724());
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            int[] nums = LeetCodeUtil.stringToIntegerArray(line);
+            int ret = pivotIndex(nums);
+            String out = String.valueOf(ret);
+            System.out.print(out);
+        }
     }
 }
