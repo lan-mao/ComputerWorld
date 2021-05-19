@@ -3,6 +3,8 @@ package LeetCode;
 import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;
 
+import java.util.List;
+
 /**
  * @author lan-mao.top
  */
@@ -64,4 +66,38 @@ public class LeetCodeUtil {
         return integerArrayToString(nums, nums.length);
     }
 
+    public static String integerArrayListToString(List<Integer> nums, int length) {
+        if (length == 0) {
+            return "[]";
+        }
+
+        StringBuilder result = new StringBuilder();
+        for(int index = 0; index < length; index++) {
+            Integer number = nums.get(index);
+            result.append(number).append(", ");
+        }
+        return "[" + result.substring(0, result.length() - 2) + "]";
+    }
+
+    public static String integerArrayListToString(List<Integer> nums) {
+        return integerArrayListToString(nums, nums.size());
+    }
+
+    public static String int2dListToString(List<List<Integer>> nums) {
+        StringBuilder sb = new StringBuilder("[");
+        for (List<Integer> list: nums) {
+            sb.append(integerArrayListToString(list));
+            sb.append(",");
+        }
+
+        sb.setCharAt(sb.length() - 1, ']');
+        return sb.toString();
+    }
+
+    public static String stringToString(String input) {
+        if (input == null) {
+            return "null";
+        }
+        return Json.value(input).toString();
+    }
 }
