@@ -1,5 +1,7 @@
 package LeetCode;
 
+import LeetCode.utill.LeetCodeUtil;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

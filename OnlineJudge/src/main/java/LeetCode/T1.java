@@ -1,11 +1,13 @@
 package LeetCode;
 
+import LeetCode.utill.LeetCodeUtil;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-import static LeetCode.LeetCodeUtil.stringToIntegerArray;
+import static LeetCode.utill.LeetCodeUtil.stringToIntegerArray;
 
 /**
  * Create Date 2021/04/29 21:41:38 <br>
