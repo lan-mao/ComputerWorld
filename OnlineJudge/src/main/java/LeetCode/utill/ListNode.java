@@ -7,7 +7,7 @@ package LeetCode.utill;
  * @version 1.0
  * LeetCode的链表数据结构 <br>
  */
-public class ListNode {
+public class ListNode{
     public int val;
     public ListNode next;
 
