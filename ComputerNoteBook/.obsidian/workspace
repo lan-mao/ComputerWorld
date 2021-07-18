@@ -1,0 +1,132 @@
+{
+  "main": {
+    "id": "f9111bd236110356",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3f015c819dbca0b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Java/Java基础面试题合集.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bbc094378ab64d75",
+    "type": "split",
+    "children": [
+      {
+        "id": "44fd368063122a00",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29b3b06cdd6e1810",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "320df0d848d86632",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "246bdbdbef810a5a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300.00000190734863,
+    "collapsed": true
+  },
+  "right": {
+    "id": "7aa7977a513f95cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "3fd627ec0002b9f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd7f7d50fefdf801",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Java/Java基础面试题合集.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4451bebf60d04e09",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Java/Java基础面试题合集.md"
+              }
+            }
+          },
+          {
+            "id": "d692ed735c4f574f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "a3f015c819dbca0b",
+  "lastOpenFiles": [
+    "Java/Java基础面试题合集.md",
+    "Java/JDK7-15新特性.md",
+    "Android/记录刷机.md",
+    "Android/Magisk Manager v8.0.7 Magisk v23.0.0.md",
+    "Android/高通手机如何进入9008刷机模式.md",
+    "Android/摘录/刷机相关基础知识.md",
+    "Android/刷机相关基础知识.md",
+    "Android/FastBoot和BootLoader模式解释.md",
+    "Android/线刷与卡刷区别.md",
+    "Android/搞机的神器们——Xposed，Magisk，TaiChi(太极)的安装使用.md"
+  ]
+}

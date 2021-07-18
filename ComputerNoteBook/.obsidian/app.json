@@ -1,0 +1,19 @@
+{
+  "attachmentFolderPath": "./resource",
+  "showLineNumber": true,
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "trashOption": "none",
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "readableLineLength": false,
+  "vimMode": false,
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "defaultViewMode": "source",
+  "strictLineBreaks": true,
+  "smartIndentList": true,
+  "autoConvertHtml": true
+}
