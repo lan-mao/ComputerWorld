@@ -9,11 +9,8 @@
             "id": "0131a2a7e68b02bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试题/Java基础面试题合集.md",
-                "mode": "source"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -41,7 +38,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#带能低昂",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -58,8 +55,7 @@
                   "state": {}
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal",
@@ -80,7 +76,6 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "面试题/Java基础面试题合集.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -96,9 +91,7 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "面试题/Java基础面试题合集.md"
-                  }
+                  "state": {}
                 }
               },
               {
@@ -364,5 +357,5 @@
       "active": "0131a2a7e68b02bc"
     }
   },
-  "active": "普通模式"
+  "active": "专注模式"
 }

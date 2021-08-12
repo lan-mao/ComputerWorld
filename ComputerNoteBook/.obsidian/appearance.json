@@ -2,12 +2,12 @@
   "baseFontSize": 16,
   "theme": "moonstone",
   "translucency": false,
-  "obsidianCss": false,
   "enabledCssSnippets": [
     "list-outline",
     "round-checkbox",
     "tag-pills",
     "tag-flag",
     "text-justify"
-  ]
+  ],
+  "obsidianCss": false
 }

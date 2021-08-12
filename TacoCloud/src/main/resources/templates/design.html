@@ -34,7 +34,7 @@
         <h3>veggies</h3>
         <div th:each="ingredient : ${veggies}" th:object="${ingredient}">
             <input name="ingredients" type="checkbox" th:value="*{id}"/>
-            <span th:text="*{name}"></span>
+        <span th:text="*{name}"></span>
         </div>
     </div>
 

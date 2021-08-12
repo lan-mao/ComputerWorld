@@ -13,7 +13,7 @@
   "useMarkdownLinks": false,
   "showUnsupportedFiles": true,
   "defaultViewMode": "source",
-  "strictLineBreaks": true,
-  "smartIndentList": true,
+  "strictLineBreaks": false,
+  "smartIndentList": false,
   "autoConvertHtml": true
 }
