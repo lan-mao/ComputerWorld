@@ -1,4 +1,5 @@
 {
+  "obsidianCss": false,
   "attachmentFolderPath": "./resource",
   "showLineNumber": true,
   "newFileLocation": "current",
@@ -15,5 +16,9 @@
   "defaultViewMode": "source",
   "strictLineBreaks": false,
   "smartIndentList": false,
-  "autoConvertHtml": true
+  "autoConvertHtml": false,
+  "fileSortOrder": "alphabetical",
+  "autoPairMarkdown": false,
+  "autoPairBrackets": false,
+  "useTab": false
 }

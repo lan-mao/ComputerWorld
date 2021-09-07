@@ -1,7 +1,8 @@
 [
   "table-editor-obsidian",
-  "obsidian-icons-plugin",
-  "obsidian-emoji-toolbar",
-  "obsidian-footnotes",
-  "note-refactor-obsidian"
+  "oz-image-plugin",
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-style-settings",
+  "markdown-prettifier",
+  "dataview"
 ]

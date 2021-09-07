@@ -6,8 +6,10 @@
 
     <groupId>top.lan-mao</groupId>
     <artifactId>ComputerWorld</artifactId>
+    <!--指定该项目为POM项目-->
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <!--项目中版本统一管理-->
     <modules>
         <module>OnlineJudge</module>
         <module>DataStructureAndAlgorithm</module>
@@ -20,32 +22,14 @@
         <module>Spring</module>
         <module>GUIStudy</module>
         <module>JavaSE</module>
+        <module>TacoCloud</module>
+        <module>Study_2021-9-6</module>
     </modules>
-
     <properties>
-        <file_encoding>uft-8</file_encoding>
-        <jdk_version>11</jdk_version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>${jdk_version}</source>
-                    <target>${jdk_version}</target>
-                    <encoding>${file_encoding}</encoding>
-                </configuration>
-            </plugin></plugins>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.1.2</version>
-        </dependency>
-    </dependencies>
 
 </project>

@@ -1,12 +1,14 @@
 ---
 title: {{title}}
-date: {{date}}
+date: {{date:YYYY-MM-DD HH:mm}}
 tags:
-  - 
-alias: 
-category: 
-stars: 
-from: 
-url: 
+  - null
+aliases: null
+category: null
+description: null
+from: null
+modified: {{date:YYYY-MM-DD HH:mm}}
+
 ---
+
 # {{title}}

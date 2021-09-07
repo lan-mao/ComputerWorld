@@ -5,8 +5,8 @@ import java.sql.*;
 /**
  *  使用JDBC连接Mysql
  *
- * @Date 2020/02/17 19:40
- * @Created by lan-mao.top
+ * @date  2020/02/17 19:40
+ * @author by lan-mao.top
  */
 
 public class ConnectMysql {

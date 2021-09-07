@@ -1,5 +1,5 @@
 [HTML5 Boilerplate homepage](https://html5boilerplate.com/) | [Documentation
-table of contents](TOC.md)
+table of contents](site/doc/TOC.md)
 
 # Usage
 
@@ -60,7 +60,7 @@ What follows is a general overview of each major part and how to use them.
 
 This directory should contain all your project's CSS files. It includes some
 initial CSS to help get you started from a solid foundation. [About the
-CSS](css.md).
+CSS](site/doc/css.md).
 
 ### doc
 
@@ -71,7 +71,7 @@ as the location and basis for your own project's documentation.
 
 This directory should contain all your project's JS files. Libraries, plugins,
 and custom code can all be included here. It includes some initial JS to help
-get you started. [About the JavaScript](js.md).
+get you started. [About the JavaScript](site/doc/js.md).
 
 ### .htaccess
 
@@ -99,7 +99,7 @@ Docs](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explor
 
 The `.editorconfig` file is provided in order to encourage and help you and your
 team to maintain consistent coding styles between different editors and IDEs.
-[Read more about the `.editorconfig` file](misc.md#editorconfig).
+[Read more about the `.editorconfig` file](site/doc/misc.md#editorconfig).
 
 ### index.html
 
@@ -133,4 +133,4 @@ Replace the default `favicon.ico`, `tile.png`, `tile-wide.png` and Apple Touch
 Icon with your own.
 
 If you want to use different Apple Touch Icons for different resolutions please
-refer to the [according documentation](extend.md#apple-touch-icons).
+refer to the [according documentation](site/doc/extend.md#apple-touch-icons).

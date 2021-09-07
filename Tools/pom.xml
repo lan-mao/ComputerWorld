@@ -12,6 +12,11 @@
     <artifactId>Tools</artifactId>
     <dependencies>
         <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.11</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.dadiyang</groupId>
             <artifactId>jave</artifactId>
             <version>1.0.5</version>
@@ -20,11 +25,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.11</version>
-        </dependency>
-        <dependency>
-            <groupId>top.lan-mao</groupId>
-            <artifactId>GUIStudy</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.qcloud</groupId>
@@ -43,7 +43,6 @@
             <version>5.7.1</version>
             <scope>test</scope>
         </dependency>
-
 
     </dependencies>
 

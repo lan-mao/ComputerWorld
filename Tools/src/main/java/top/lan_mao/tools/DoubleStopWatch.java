@@ -1,17 +1,17 @@
 package top.lan_mao.tools;
 
-import cn.hutool.core.date.BetweenFormater;
+import cn.hutool.core.date.BetweenFormatter;
 import cn.hutool.core.date.DateUtil;
 
 import java.awt.*;
 
 /**
  * Create Date 2020/12/06 15:51:46 <br>
- * Created by lan-mao.top <br>
+ * @author lan-mao.top <br>
  * 两个秒表同时显示 <br>
  */
 public class DoubleStopWatch {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Frame frame1 = new Frame("1");
         Frame frame2 = new Frame("2");
         Label label1 = new Label();
@@ -36,7 +36,7 @@ public class DoubleStopWatch {
         synchronized (new Object()) {
             while (--i > 0) {
                 long now = System.currentTimeMillis() - start;
-                String time = DateUtil.formatBetween(now, BetweenFormater.Level.MILLSECOND);
+                String time = DateUtil.formatBetween(now, BetweenFormatter.Level.MILLISECOND);
                 label1.setText(time);
                 label2.setText(time);
                 //Thread.sleep(10);

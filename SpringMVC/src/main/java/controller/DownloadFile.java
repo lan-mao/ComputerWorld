@@ -14,8 +14,10 @@ import java.nio.charset.StandardCharsets;
 /**
  * Create Date 2020/09/23 10:41:46
  * Created by lan-mao.top
- * TODO 
- *  - 
+ * TODO
+ * -
+ *
+ * @author lan-mao.top
  */
 
 @Controller
@@ -46,8 +48,8 @@ public class DownloadFile {
         String path = "C:\\Users\\12641\\Desktop\\你好.png";
         //指定下载文件
         File file = new File(path);
-        String fileName =  new String(file.getName().getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1);
-        response.setHeader("Content-Disposition" ,"attachment;filename=" + fileName);
+        String fileName = new String(file.getName().getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1);
+        response.setHeader("Content-Disposition", "attachment;filename=" + fileName);
         InputStream inputStream = new FileInputStream(file);
         OutputStream outputStream = response.getOutputStream();
         //创建字节数组，将文件内容复制进字节数组

@@ -1,1 +1,11 @@
-{}
+{
+  "editor:save-file": [],
+  "markdown-prettifier:markdown-prettifier-run": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "S"
+    }
+  ]
+}
