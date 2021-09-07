@@ -1,0 +1,9 @@
+{
+  "bullet": "-",
+  "emphasis": "_",
+  "rule": "-",
+  "createHeaderIfNotPresent": false,
+  "updateHeader": true,
+  "newHeaderTemplate": "modified: {{date:YYYY-MM-DD HH:mm}}",
+  "listItemIndent": "one"
+}
