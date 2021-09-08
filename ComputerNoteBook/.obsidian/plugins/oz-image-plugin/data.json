@@ -1,8 +1,0 @@
-{
-  "renderAll": true,
-  "renderPDF": true,
-  "renderIframe": true,
-  "renderExcalidraw": true,
-  "refreshImagesAfterChange": false,
-  "WYSIWYG": true
-}
