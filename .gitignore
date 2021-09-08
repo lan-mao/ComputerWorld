@@ -3,3 +3,12 @@ out
 *.iml
 /GradleDemo/.gradle/
 /StudyPython/Resoure/
+/CompilerTheory/target/
+/JavaStudy/target/
+/Spring/target/
+/SpringMVC/target/
+/StudyHTML5/node_modules/
+/TestMybatis/target/
+/DataStructureAndAlgorithm/target/
+/OnlineJudge/target/
+/Tools/target/
