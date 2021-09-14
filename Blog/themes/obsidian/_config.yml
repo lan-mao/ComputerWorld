@@ -113,7 +113,7 @@ gitalk:
   enable: true
   autoExpand: true
   clientID: '8678b87961ccb910c165'
-  clientSecret: 'd9919b5a800fe54e09bce61db0a39f623e63cde7'
+  clientSecret: '***'
   repo: 'lan-mao.github.io'
   owner: 'lan-mao'
   admin: ['lan-mao']
