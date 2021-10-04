@@ -53,8 +53,9 @@ public class TestJAVE {
             List<File> fileList;
             if (i + each >= length) {
                 fileList = files.subList(i, length - 1);
-            } else
+            } else {
                 fileList = files.subList(i, i + each);
+            }
             i += each;
             System.out.println(fileList);
             new Thread(() -> {
@@ -77,9 +78,11 @@ public class TestJAVE {
 
     private static boolean fileFilter(File file) {
         String type = file.getName().substring(file.getName().indexOf('.') + 1);
-        if ((!"mp4".equals(type)) && (!"avi".equals(type)))
+        if ((!"mp4".equals(type)) && (!"avi".equals(type))) {
             return false;
-        else return true;
+        }else {
+            return true;
+        }
     }
 
     private static long getTimeInList(Collection<File> files) {

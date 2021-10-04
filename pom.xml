@@ -13,20 +13,13 @@
     <modules>
         <module>OnlineJudge</module>
         <module>DataStructureAndAlgorithm</module>
-        <module>JavaStudy</module>
-        <module>SORM</module>
         <module>CompilerTheory</module>
-        <module>TestMybatis</module>
         <module>Tools</module>
-        <module>SpringMVC</module>
-        <module>Spring</module>
-        <module>GUIStudy</module>
-        <module>JavaSE</module>
-        <module>TacoCloud</module>
         <module>Study_2021-09</module>
         <module>SpiderWeChat</module>
         <module>ScriptPlatform</module>
         <module>Study_2021-10</module>
+        <module>Study_Old</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -34,5 +27,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
 </project>
