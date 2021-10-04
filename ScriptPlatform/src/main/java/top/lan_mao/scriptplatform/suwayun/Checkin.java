@@ -12,12 +12,15 @@ import cn.hutool.json.JSONUtil;
 import cn.hutool.log.LogFactory;
 import cn.hutool.setting.Setting;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Create Date 2021/09/28 15:25:28 <br>
  *
  * @author lan-mao.top <br>
  * @version 1.0
- * TODO:创建定时器，定时签到 <br>
+ * 创建定时器，定时签到 <br>
  */
 public class Checkin {
 
@@ -30,6 +33,7 @@ public class Checkin {
     private static final Integer CHECKIN_JSON_CODE_REPEAT;
     private static final String EMAIL_RECIPIENT;
     private static final String EMAIL_TITLE;
+
     private static final Setting SETTING;
 
     static{
@@ -67,19 +71,25 @@ public class Checkin {
      * @param message 邮件内容
      * @return 邮件id
      */
-    private static String sendMail(String message) {
+    public static String sendMail(String message) {
         return MailUtil.send(EMAIL_RECIPIENT, EMAIL_TITLE, message, false);
     }
 
+    /**
+     * 签到并且发送邮件
+     * @return 返回邮件id
+     */
     public static String sendMailAfterCheckin() {
         String body = UnicodeUtil.toString(checkinSuWaYun().body());
         StringBuilder message = new StringBuilder();
         JSONObject jsonObject = JSONUtil.parseObj(body);
         Integer anInt = jsonObject.getInt(CHECKIN_JSON_CODE_KEY);
         if (anInt != null && (anInt.equals(CHECKIN_JSON_CODE_SUCCESS) || anInt.equals(CHECKIN_JSON_CODE_REPEAT)) ) {
-            message.append("签到成功\n").append(jsonObject.getStr("message")).append("\n");
+            message.append("签到成功\n").append(jsonObject.getStr("" +
+                    "message")).append("\n");
         }
         message.append(body).append("\n");
+        message.append("运行时间：").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS").format(new Date()));
         return sendMail(message.toString());
     }
 }
