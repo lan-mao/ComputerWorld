@@ -23,7 +23,10 @@
         <module>GUIStudy</module>
         <module>JavaSE</module>
         <module>TacoCloud</module>
-        <module>Study_2021-9-6</module>
+        <module>Study_2021-09</module>
+        <module>SpiderWeChat</module>
+        <module>ScriptPlatform</module>
+        <module>Study_2021-10</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
