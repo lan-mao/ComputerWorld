@@ -2,7 +2,6 @@ package top.lan_mao.computer_world.spring.pojo;
 /**
  * Create Date 2020/09/11 17:37
  * Created by lan-mao.top
- * TODO 
  *  - 基金类
  */
 

@@ -5,10 +5,9 @@ import top.lan_mao.computer_world.spring.bean.Person;
 /**
  * Create Date 2020/09/08 17:50
  * Created by lan-mao.top
- * TODO 
  *  - 一个没有接口的实现类
  */
- 
+
 public class NoImplementsClass {
     public String doSomething() {
         return "CHINA";

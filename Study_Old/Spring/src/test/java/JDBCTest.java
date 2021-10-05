@@ -5,10 +5,8 @@ import java.sql.*;
 /**
  * Create Date 2020/09/12 16:34
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class JDBCTest {
     @Test
     public void jdbcTest01() throws SQLException {

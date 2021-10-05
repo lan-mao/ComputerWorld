@@ -2,10 +2,8 @@ package cs316project;
 /**
  * Create Date 2020/04/26 20:03
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class ValInt extends ValNum{
     int value;
 

@@ -6,10 +6,9 @@ import org.aopalliance.intercept.MethodInvocation;
 /**
  * Create Date 2020/09/09 10:31
  * Created by lan-mao.top
- * TODO 
  *  - 环绕通知
  */
- 
+
 public class ServiceMethodInterceptor implements MethodInterceptor {
     @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {

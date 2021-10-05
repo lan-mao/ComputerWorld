@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Create Date 2020/09/23 15:40:49
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class FirstInterceptor implements HandlerInterceptor {
     //请求处理器方法执行之前执行
     //如果返回false，则不执行处理器方法，true则执行

@@ -20,7 +20,7 @@ public class FunExp implements Eval{
 
     @Override
     /**
-     * todo state列表中数据的清除与添加
+     * state列表中数据的清除与添加
      */
     public Val eval(List<Val> state) {
         List<Val> temp = new ArrayList<>();

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * TODO 
+ *
  *  - 语法解释器
  *  - 目前使用接口的继承
  *  -
  */
- 
+
 public class Interpreter extends Parser{
     public static HashMap<String, Val> varState = new HashMap<>();
 

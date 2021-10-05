@@ -8,8 +8,6 @@ import java.util.Objects;
 /**
  * Create Date 2020/09/11 22:10
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
 
 //如果使Spring实现对jdbc的支持，需要继承类JdbcDaoSupport

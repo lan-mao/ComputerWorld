@@ -6,10 +6,8 @@ import util.MybatisUtil;
 /**
  * Create Date 2020/02/29 14:50
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class TestInsert {
     @Test
     public void testInsert(){

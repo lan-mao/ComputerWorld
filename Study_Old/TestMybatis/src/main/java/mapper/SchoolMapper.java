@@ -12,10 +12,9 @@ import java.util.List;
 /**
  * Create Date 2020/03/03 21:09
  * Created by lan-mao.top
- * TODO 
  *  - class,teacher,student的mapper映射文件
  */
- 
+
 public interface SchoolMapper {
     List<StudentContainClass> listStudentContainClass();
     List<ClassContainStudent> listClassContainStudent();

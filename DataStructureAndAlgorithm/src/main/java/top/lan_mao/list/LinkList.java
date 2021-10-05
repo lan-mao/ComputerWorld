@@ -5,11 +5,10 @@ import java.util.Arrays;
 /**
  * Create Date 2020/03/09 11:13
  * Created by lan-mao.top
- * TODO 
  *  - 链表的实现类
  *  - 实现的是双向循环链表
  */
- 
+
 public class LinkList<E> {
     private Node first;
     private Node end;

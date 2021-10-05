@@ -2,10 +2,8 @@ package cs316project;
 /**
  * Create Date 2020/04/26 20:04
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class ValError extends Val{
     String errorInfo;
 

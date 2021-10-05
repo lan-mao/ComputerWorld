@@ -5,10 +5,8 @@ import java.io.Serializable;
 /**
  * Create Date 2020/09/20 11:27:37
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class FormPOJO implements Serializable {
     private String username;
     private String password;

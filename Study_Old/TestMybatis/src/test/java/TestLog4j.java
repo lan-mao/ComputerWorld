@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Create Date 2020/02/27 10:38
  * Created by lan-mao.top
- * TODO 测试log4j
+ * 测试log4j
  */
 
 public class TestLog4j {

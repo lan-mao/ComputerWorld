@@ -6,10 +6,8 @@ import top.lan_mao.computer_world.spring.service.DoSomethingService;
 /**
  * Create Date 2020/09/10 10:29
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class AspectJTest {
 
     @Test

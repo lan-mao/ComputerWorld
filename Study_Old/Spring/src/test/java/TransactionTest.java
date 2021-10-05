@@ -15,10 +15,8 @@ import java.sql.Statement;
 /**
  * Create Date 2020/09/12 11:38
  * Created by lan-mao.top
- * TODO 
- *  - 
  */
- 
+
 public class TransactionTest {
 
     public BankService bankService;

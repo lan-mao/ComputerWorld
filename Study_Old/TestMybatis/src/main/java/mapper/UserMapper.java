@@ -6,10 +6,9 @@ import pojo.User;
 /**
  * Create Date 2020/02/29 16:52
  * Created by lan-mao.top
- * TODO 
  *  - UserMapper的接口
  */
- 
+
 public interface UserMapper {
     User getAll();
     User findById(Integer id);

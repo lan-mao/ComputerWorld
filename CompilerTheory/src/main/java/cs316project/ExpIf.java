@@ -23,7 +23,7 @@ public class ExpIf extends Exp {
     }
 
     /**
-     * todo state的增减，应在什么时候
+     * state的增减，应在什么时候
      * @param state
      * @return
      */

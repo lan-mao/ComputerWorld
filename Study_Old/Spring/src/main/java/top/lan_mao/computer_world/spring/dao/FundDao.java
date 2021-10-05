@@ -2,10 +2,9 @@ package top.lan_mao.computer_world.spring.dao;
 /**
  * Create Date 2020/09/11 22:05
  * Created by lan-mao.top
- * TODO 
  *  - 基金账户操作接口
  */
- 
+
 public interface FundDao {
     /**
      * 开基金账户

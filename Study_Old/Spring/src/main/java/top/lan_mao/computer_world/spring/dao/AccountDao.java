@@ -2,10 +2,9 @@ package top.lan_mao.computer_world.spring.dao;
 /**
  * Create Date 2020/09/11 22:02
  * Created by lan-mao.top
- * TODO 
  *  - 银行账户的操作接口
  */
- 
+
 public interface AccountDao {
     /**
      * 开银行账户

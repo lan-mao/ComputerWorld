@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Create Date 2020/08/29 19:28
  * Created by lan-mao.top
- * TODO 
  *  - 入门SpringMVC
  */
- 
+
 public class HelloController implements Controller {
 
     @Override

@@ -15,10 +15,9 @@ import java.util.Objects;
 /**
  * Create Date 2020/09/07 9:51
  * Created by lan-mao.top
- * TODO 
  *  - 测试Spring
  */
- 
+
 public class SomeTest {
 
     @Test
@@ -129,7 +128,7 @@ public class SomeTest {
         System.out.println(service.doNothing());
         System.out.println(service.doSomething());
     }
-    
+
     @Test
     public void someTest12() {
         String a = "";

@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author lan-mao.top
- * TODO 对角线遍历
+ * 对角线遍历
  */
 
 public class T498 {
