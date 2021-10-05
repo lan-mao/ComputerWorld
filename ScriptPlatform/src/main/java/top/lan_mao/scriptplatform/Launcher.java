@@ -19,6 +19,7 @@ public class Launcher {
     public static void main(String[] args) {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
+            @Override
             public void run() {
                 LogFactory.get().info("运行时间：" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS").format(new Date()));
                 LogFactory.get().info(Checkin.sendMailAfterCheckin());

@@ -7,7 +7,6 @@ import cn.hutool.extra.mail.MailUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.Method;
-import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import cn.hutool.log.LogFactory;
 import cn.hutool.setting.Setting;
@@ -28,9 +27,6 @@ public class Checkin {
     private static final String CHECKIN_PATH;
     private static final String CHECKIN_AUTHORIZATION;
     private static final String CHECKIN_AUTHORIZATION_KEY;
-    private static final String CHECKIN_JSON_CODE_KEY;
-    private static final Integer CHECKIN_JSON_CODE_SUCCESS;
-    private static final Integer CHECKIN_JSON_CODE_REPEAT;
     private static final String EMAIL_RECIPIENT;
     private static final String EMAIL_TITLE;
 
@@ -42,9 +38,6 @@ public class Checkin {
         CHECKIN_AUTHORIZATION = SETTING.get("CHECKIN_AUTHORIZATION");
         CHECKIN_PATH = SETTING.get("CHECKIN_PATH");
         CHECKIN_AUTHORIZATION_KEY = SETTING.get("CHECKIN_AUTHORIZATION_KEY");
-        CHECKIN_JSON_CODE_KEY = SETTING.get("CHECKIN_JSON_CODE_KEY");
-        CHECKIN_JSON_CODE_REPEAT = SETTING.getInt("CHECKIN_JSON_CODE_REPEAT");
-        CHECKIN_JSON_CODE_SUCCESS = SETTING.getInt("CHECKIN_JSON_CODE_SUCCESS");
         EMAIL_TITLE = SETTING.get("EMAIL_TITLE");
         EMAIL_RECIPIENT = SETTING.get("EMAIL_RECIPIENT");
     }
@@ -82,14 +75,25 @@ public class Checkin {
     public static String sendMailAfterCheckin() {
         String body = UnicodeUtil.toString(checkinSuWaYun().body());
         StringBuilder message = new StringBuilder();
-        JSONObject jsonObject = JSONUtil.parseObj(body);
-        Integer anInt = jsonObject.getInt(CHECKIN_JSON_CODE_KEY);
-        if (anInt != null && (anInt.equals(CHECKIN_JSON_CODE_SUCCESS) || anInt.equals(CHECKIN_JSON_CODE_REPEAT)) ) {
-            message.append("签到成功\n").append(jsonObject.getStr("" +
-                    "message")).append("\n");
+        MessageBO response = parseJSON(body);
+        switch (response.getCode()) {
+            case 10:
+                message.append(response.getMessage());
+                break;
+            case 100:
+                message.append(response.getData().getMessage());
+                break;
+            default:
+                message.append("签到失败");
+                break;
         }
+        message.append("\n");
         message.append(body).append("\n");
         message.append("运行时间：").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS").format(new Date()));
         return sendMail(message.toString());
+    }
+
+    private static MessageBO parseJSON(String json) {
+        return JSONUtil.toBean(json, MessageBO.class);
     }
 }
