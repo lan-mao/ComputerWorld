@@ -1,6 +1,6 @@
-package top.lan_mao.javase.base;
+package top.lanmao.javase.base;
 
-import top.lan_mao.tools.MathUtil;
+import top.lanmao.tools.MathUtil;
 
 /**
  * Create Date 2020/12/10 20:26:08 <br>

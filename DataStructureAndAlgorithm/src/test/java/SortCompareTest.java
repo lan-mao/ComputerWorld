@@ -3,9 +3,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import top.lan_mao.sort.BubbleSort;
-import top.lan_mao.sort.InsertionSort;
-import top.lan_mao.sort.SelectionSort;
+import top.lanmao.sort.BubbleSort;
+import top.lanmao.sort.InsertionSort;
+import top.lanmao.sort.SelectionSort;
 
 /**
  * Create Date 2021/01/30 15:55:18 <br>

@@ -1,6 +1,6 @@
-package top.lan_mao.computer_world.spring.service.impl;
+package top.lanmao.computer_world.spring.service.impl;
 
-import top.lan_mao.computer_world.spring.bean.Person;
+import top.lanmao.computer_world.spring.bean.Person;
 
 /**
  * Create Date 2020/09/08 17:50

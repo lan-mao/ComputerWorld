@@ -1,11 +1,11 @@
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import top.lan_mao.computer_world.spring.proxy.ServiceProxyByCglibProxyFactory;
-import top.lan_mao.computer_world.spring.proxy.ServiceProxyByStatic;
-import top.lan_mao.computer_world.spring.service.DoSomethingService;
-import top.lan_mao.computer_world.spring.service.impl.DoSomethingServiceImpl;
-import top.lan_mao.computer_world.spring.service.impl.NoImplementsClass;
+import top.lanmao.computer_world.spring.proxy.ServiceProxyByCglibProxyFactory;
+import top.lanmao.computer_world.spring.proxy.ServiceProxyByStatic;
+import top.lanmao.computer_world.spring.service.DoSomethingService;
+import top.lanmao.computer_world.spring.service.impl.DoSomethingServiceImpl;
+import top.lanmao.computer_world.spring.service.impl.NoImplementsClass;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

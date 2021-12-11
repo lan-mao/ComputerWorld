@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud.data;
+package top.lanmao.tacocloud.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

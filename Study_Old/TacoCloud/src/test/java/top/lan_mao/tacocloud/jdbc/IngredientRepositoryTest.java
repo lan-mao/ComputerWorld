@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud.jdbc;
+package top.lanmao.tacocloud.jdbc;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

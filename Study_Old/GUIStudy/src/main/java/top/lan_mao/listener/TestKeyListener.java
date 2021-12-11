@@ -1,6 +1,6 @@
-package top.lan_mao.listener;
+package top.lanmao.listener;
 
-import top.lan_mao.base.BaseFrame;
+import top.lanmao.base.BaseFrame;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;

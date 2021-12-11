@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lanmao.study202110.mybatisstudy3.dao.MemberDAO">
+
+    <cache readOnly="true"/>
+
+    <resultMap id="memberMap" type="Member">
+        <id column="member_id" property="memberId"/>
+        <result column="member_nick" property="memberNick"/>
+        <result column="member_age" property="memberAge"/>
+        <result column="member_gender" property="memberGender"/>
+        <result column="member_city" property="memberCity"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="listMemberByNick" resultMap="memberMap">
+        select member.member_id,
+               member.member_nick,
+               member.member_gender,
+               member.member_age,
+               member.member_city,
+               member.create_time,
+               member.update_time
+        from mybatis_study_2021.member
+        where member.member_nick like concat('%', #{keyWord}, '%')
+    </select>
+
+    <select id="getMemberById" resultMap="memberMap">
+        select member.member_id,
+               member.member_nick,
+               member.member_gender,
+               member.member_age,
+               member.member_city,
+               member.create_time,
+               member.update_time
+        from mybatis_study_2021.member
+        where member.member_id = #{id}
+    </select>
+
+</mapper>

@@ -1,11 +1,11 @@
-package top.lan_mao.computer_world.spring.bean;
+package top.lanmao.computer_world.spring.bean;
 /**
  * Create Date 2020/09/08 8:41
  * Created by lan-mao.top
  *
- *  - 
+ *  -
  */
- 
+
 public class Person {
     private String name;
     private Integer age;

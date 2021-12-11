@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <settings>
+        <setting name="localCacheScope" value="STATEMENT"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="top.lanmao.study202110.mybatisstudy3.pojo.Member" alias="Member"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="top.lanmao.study202110.mybatisstudy3.util.ConfigDataSourceFactory">
+                <property name="driverClass" value="${driver}"/>
+                <property name="jdbcUrl" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/MemberMapper.xml"/>
+    </mappers>
+</configuration>

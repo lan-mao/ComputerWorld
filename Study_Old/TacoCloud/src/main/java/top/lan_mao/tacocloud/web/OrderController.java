@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud.web;
+package top.lanmao.tacocloud.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import top.lan_mao.tacocloud.data.Order;
+import top.lanmao.tacocloud.data.Order;
 
 import javax.validation.Valid;
 

@@ -1,7 +1,7 @@
 import cn.hutool.core.util.RandomUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import top.lan_mao.sort.*;
+import top.lanmao.sort.*;
 
 import java.util.Arrays;
 

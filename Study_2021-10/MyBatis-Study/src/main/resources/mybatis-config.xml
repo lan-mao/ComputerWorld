@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <settings>
+        <!--驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--输出操作日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <!--        <typeAlias type="top.lanmao.study202110.mybatisstudy.dao.StudentDAOImpl" alias="StudentDAOImpl" />-->
+        <package name="top.lanmao.study202110.mybatisstudy.pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <!--配置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <!--type指定事务管理形式有：JDBC:可以手动进行提交回滚的事务管理/MANAGED：交由容器进行事务管理-->
+            <transactionManager type="JDBC"/>
+            <!--配置数据库连接-->
+            <!--type：配置对session的管理方式-->
+            <!--POOLED:使用连接池管理/UNPOOLED:不使用连接池/JNDI：实现能在EJB等容器中使用-->
+            <dataSource type="POOLED">
+                <property name="driver" value="$driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--用于加载映射文件和注解-->
+    <mappers>
+        <mapper resource="mybatis-mappers/StudentMapper.xml"/>
+        <!--        <mapper class="top.lanmao.study202110.mybatisstudy.dao.StudentDAOImpl"/>-->
+        <!--        <package name="top.lanmao.study202110.mybatisstudy.dao"/>-->
+    </mappers>
+</configuration>

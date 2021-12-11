@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud;
+package top.lanmao.tacocloud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

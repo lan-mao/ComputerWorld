@@ -1,7 +1,7 @@
-package top.lan_mao.computer_world.spring.dao.impl;
+package top.lanmao.computer_world.spring.dao.impl;
 
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
-import top.lan_mao.computer_world.spring.dao.AccountDao;
+import top.lanmao.computer_world.spring.dao.AccountDao;
 
 import java.util.Objects;
 

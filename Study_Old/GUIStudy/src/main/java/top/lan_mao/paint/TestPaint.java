@@ -1,6 +1,6 @@
-package top.lan_mao.paint;
+package top.lanmao.paint;
 
-import top.lan_mao.base.BaseFrame;
+import top.lanmao.base.BaseFrame;
 
 import java.awt.*;
 

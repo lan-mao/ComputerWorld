@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper文件相当于DAO接口的实现类，namespace属性指定实现的接口的全限定名-->
+<mapper namespace="top.lanmao.study202110.mybatisstudy.dao.StudentDAOImpl">
+
+    <sql id="student_field">
+        student.sid,
+        student.stu_num,
+        student.stu_name,
+        student.stu_gender,
+        student.stu_age,
+        student.create_time,
+        student.update_time
+    </sql>
+
+    <!--id属性于方法名保持一致-->
+    <insert id="insertStudent" useGeneratedKeys="true" keyProperty="sid">
+        insert into mybatis_study_2021.student (student.stu_num, student.stu_name, student.stu_gender, student.stu_age,
+                                                student.create_time, student.update_time)
+        values (#{stuNum}, #{stuName}, #{stuGender}, #{stuAge}, #{createTime}, #{updateTime})
+    </insert>
+
+    <delete id="deleteStudentByNum">
+        delete
+        from mybatis_study_2021.student
+        where student.stu_num = #{stuNum}
+    </delete>
+
+    <update id="updateStudentById">
+        update mybatis_study_2021.student
+        <set>
+            <if test="stuNum != null and stuNum != ''">
+                student.stu_num = #{stuNum},
+            </if>
+            <if test="stuName != null and stuName != ''">
+                student.stu_name = #{stuName},
+            </if>
+            <if test="stuGender != null and stuGender != ''">
+                student.stu_gender = #{stuGender},
+            </if>
+            <if test="stuAge != null and stuAge != ''">
+                student.stu_age = #{stuAge},
+            </if>
+            <if test="updateTime != null">
+                student.update_time = #{updateTime}
+            </if>
+        </set>
+        where sid = #{sid}
+    </update>
+
+    <!--resultType：设置返回值类型-->
+    <!--resultSets：设置返回的集合类型-->
+    <select id="listAllStudent" resultType="studentDO" resultSets="java.util.Set">
+        select
+        <include refid="student_field"/>
+        from mybatis_study_2021.student
+    </select>
+
+    <!--每个表都需要设计resultMap映射，以便于数据表与实体类解耦合-->
+    <resultMap id="StudentDO" type="studentDO">
+        <id column="sid" property="sid"/>
+        <result column="stu_num" property="stuNum"/>
+        <result column="stu_name" property="stuName"/>
+        <result column="stu_gender" property="stuGender"/>
+        <result column="stu_age" property="stuAge"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+<select id="listStudentByParameter" resultMap="StudentDO">
+    select student.sid,
+           student.stu_num,
+           student.stu_name,
+           student.stu_gender,
+           student.stu_age,
+           student.create_time,
+           student.update_time
+    from mybatis_study_2021.student
+    <where>
+        <if test="sid != null">
+            student.sid = #{sid}
+        </if>
+        <if test="stuNum != null and stuNum != ''">
+            and student.stu_num = #{stuNum}
+        </if>
+        <if test="stuName != null and stuName != ''">
+            and student.stu_name = #{stuName}
+        </if>
+        <if test="stuGender != null and stuGender != ''">
+            and student.stu_gender = #{stuGender}
+        </if>
+        <if test="stuAge != null and stuAge != ''">
+            and student.stu_age = #{stuAge}
+        </if>
+        <if test="updateTime != null">
+            and student.update_time = #{updateTime}
+        </if>
+        <if test="createTime != null">
+            and student.create_time = #{createTime}
+        </if>
+    </where>
+    <if test="pageSize != null and start != null">
+        limit #{start}, #{pageSize}
+    </if>
+</select>
+
+    <select id="listStudentByPage" resultMap="StudentDO">
+        select student.sid,
+               student.stu_num,
+               student.stu_name,
+               student.stu_gender,
+               student.stu_age,
+               student.create_time,
+               student.update_time
+        from mybatis_study_2021.student
+        limit #{start}, #{pageSize}
+    </select>
+
+    <select id="countStudent" resultType="int">
+        select count(*) from mybatis_study_2021.student
+    </select>
+</mapper>

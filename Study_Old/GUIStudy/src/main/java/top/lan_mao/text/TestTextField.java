@@ -1,6 +1,6 @@
-package top.lan_mao.text;
+package top.lanmao.text;
 
-import top.lan_mao.base.BaseFrame;
+import top.lanmao.base.BaseFrame;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

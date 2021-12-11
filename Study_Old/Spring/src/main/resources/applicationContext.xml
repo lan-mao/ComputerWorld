@@ -18,7 +18,7 @@
         <!--指定代理目标对象-->
         <property name="target" ref="doSomethingService"/>
         <!--指定目标类实现的所有接口-->
-        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interfaces" value="top.lanmao.computer_world.spring.service.DoSomethingService"/>
         <!--指定切面-->
         <property name="interceptorNames" value="methodBeforeAdvice"/>
     </bean>
@@ -28,21 +28,21 @@
     <!--注册代理工厂-->
     <bean id="afterProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="target" ref="doSomethingService"/>
-        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interfaces" value="top.lanmao.computer_world.spring.service.DoSomethingService"/>
         <property name="interceptorNames" value="methodAfterAdvice"/>
     </bean>
 
     <bean id="interceptorMethodAdvice" class="top.lan_mao.computer_world.spring.aop.ServiceMethodInterceptor"/>
     <bean id="interceptorProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="target" ref="doSomethingService"/>
-        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interfaces" value="top.lanmao.computer_world.spring.service.DoSomethingService"/>
         <property name="interceptorNames" value="interceptorMethodAdvice"/>
     </bean>
 
     <bean id="throwsMethodAdvice" class="top.lan_mao.computer_world.spring.aop.ServiceMethodThrowsAdvice"/>
     <bean id="throwsProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="target" ref="doSomethingService"/>
-        <property name="interfaces" value="top.lan_mao.computer_world.spring.service.DoSomethingService"/>
+        <property name="interfaces" value="top.lanmao.computer_world.spring.service.DoSomethingService"/>
         <property name="interceptorNames" value="throwsMethodAdvice"/>
     </bean>
 

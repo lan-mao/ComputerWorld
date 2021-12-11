@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud.web;
+package top.lanmao.tacocloud.web;
 
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

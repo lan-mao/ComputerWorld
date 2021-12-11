@@ -16,10 +16,11 @@
         <module>CompilerTheory</module>
         <module>Tools</module>
         <module>Study_2021-09</module>
-        <module>SpiderWeChat</module>
         <module>ScriptPlatform</module>
         <module>Study_2021-10</module>
         <module>Study_Old</module>
+        <module>Study_2021-11</module>
+        <module>Study_2021-12</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

@@ -1,7 +1,7 @@
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import top.lan_mao.computer_world.spring.service.DoSomethingService;
+import top.lanmao.computer_world.spring.service.DoSomethingService;
 
 /**
  * Create Date 2020/09/10 10:29

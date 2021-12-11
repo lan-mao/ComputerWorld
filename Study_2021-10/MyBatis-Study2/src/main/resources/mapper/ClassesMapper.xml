@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lanmao.study202110.mybatisstudy2.dao.ClassesDAO">
+
+    <resultMap id="classes" type="Classes">
+        <id column="c_id" property="cId"/>
+        <result column="c_name" property="cName"/>
+        <result column="c_desc" property="cDesc"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <!--collection表示多个数据的集合-->
+        <!--ofType属性指定集合的元素类型-->
+<!--        <collection property="students"-->
+<!--                    select="top.lanmao.study202110.mybatisstudy2.dao.StudentsDAO.getStudentsByCid"-->
+<!--                    column="c_id"/>-->
+    </resultMap>
+
+    <select id="getClassesById" resultMap="classes">
+        select c.c_id,
+               c.c_name,
+               c.c_desc,
+               c.create_time,
+               c.update_time
+        from mybatis_study_2021.classes as c
+        where c.c_id = #{cId};
+    </select>
+</mapper>

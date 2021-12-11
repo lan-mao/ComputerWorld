@@ -1,6 +1,6 @@
-package top.lan_mao.tacocloud.jdbc;
+package top.lanmao.tacocloud.jdbc;
 
-import top.lan_mao.tacocloud.data.Ingredient;
+import top.lanmao.tacocloud.data.Ingredient;
 
 /**
  * Create Date 2021/04/20 18:33:04 <br>

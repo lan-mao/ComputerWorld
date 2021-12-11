@@ -1,4 +1,4 @@
-package top.lan_mao.computerworld.study_2021_09.mybatis_study.dao;
+package top.lanmao.computerworld.study_2021_09.mybatis_study.dao;
 
 import lombok.*;
 

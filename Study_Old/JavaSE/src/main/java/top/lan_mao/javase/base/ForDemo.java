@@ -1,4 +1,4 @@
-package top.lan_mao.javase.base;
+package top.lanmao.javase.base;
 
 /**
  * Create Date 2020/12/11 11:24:01 <br>

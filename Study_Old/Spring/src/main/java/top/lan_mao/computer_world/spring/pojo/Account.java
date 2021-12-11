@@ -1,4 +1,4 @@
-package top.lan_mao.computer_world.spring.pojo;
+package top.lanmao.computer_world.spring.pojo;
 /**
  * Create Date 2020/09/11 17:28
  * Created by lan-mao.top

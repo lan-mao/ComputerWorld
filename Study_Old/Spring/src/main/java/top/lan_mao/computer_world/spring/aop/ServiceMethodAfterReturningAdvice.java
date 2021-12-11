@@ -1,4 +1,4 @@
-package top.lan_mao.computer_world.spring.aop;
+package top.lanmao.computer_world.spring.aop;
 
 import org.springframework.aop.AfterReturningAdvice;
 

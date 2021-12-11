@@ -1,6 +1,6 @@
-package top.lan_mao.computer_world.spring.service;
+package top.lanmao.computer_world.spring.service;
 
-import top.lan_mao.computer_world.spring.exceptions.BankException;
+import top.lanmao.computer_world.spring.exceptions.BankException;
 
 /**
  * Create Date 2020/09/12 11:22

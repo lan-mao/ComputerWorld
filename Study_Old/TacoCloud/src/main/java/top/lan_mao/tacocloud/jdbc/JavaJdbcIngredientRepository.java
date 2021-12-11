@@ -1,8 +1,8 @@
-package top.lan_mao.tacocloud.jdbc;
+package top.lanmao.tacocloud.jdbc;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import top.lan_mao.tacocloud.data.Ingredient;
+import top.lanmao.tacocloud.data.Ingredient;
 
 import javax.sql.DataSource;
 import java.sql.*;

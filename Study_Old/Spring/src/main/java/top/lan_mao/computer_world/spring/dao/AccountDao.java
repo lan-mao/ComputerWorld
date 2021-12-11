@@ -1,4 +1,4 @@
-package top.lan_mao.computer_world.spring.dao;
+package top.lanmao.computer_world.spring.dao;
 /**
  * Create Date 2020/09/11 22:02
  * Created by lan-mao.top

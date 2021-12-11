@@ -1,4 +1,4 @@
-package top.lan_mao.computer_world.spring.aspects;
+package top.lanmao.computer_world.spring.aspects;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

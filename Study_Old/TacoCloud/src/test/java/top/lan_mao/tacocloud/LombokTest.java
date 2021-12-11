@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud;
+package top.lanmao.tacocloud;
 
 import lombok.extern.java.Log;
 import org.junit.jupiter.api.Test;

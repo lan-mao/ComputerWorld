@@ -1,4 +1,4 @@
-package top.lan_mao.swing;
+package top.lanmao.swing;
 
 import javax.swing.*;
 import java.awt.*;

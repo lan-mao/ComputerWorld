@@ -1,13 +1,13 @@
-package top.lan_mao.computer_world.spring.service.impl;
+package top.lanmao.computer_world.spring.service.impl;
 
-import top.lan_mao.computer_world.spring.bean.Person;
-import top.lan_mao.computer_world.spring.service.DoSomethingService;
+import top.lanmao.computer_world.spring.bean.Person;
+import top.lanmao.computer_world.spring.service.DoSomethingService;
 
 /**
  * Create Date 2020/09/07 10:09
  * Created by lan-mao.top
  */
- 
+
 public class DoSomethingServiceImpl implements DoSomethingService {
 
     private String name;

@@ -1,4 +1,4 @@
-package top.lan_mao.tacocloud.mvc;
+package top.lanmao.tacocloud.mvc;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;

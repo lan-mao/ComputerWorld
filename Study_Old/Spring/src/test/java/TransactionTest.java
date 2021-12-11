@@ -3,8 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import top.lan_mao.computer_world.spring.exceptions.BankException;
-import top.lan_mao.computer_world.spring.service.BankService;
+import top.lanmao.computer_world.spring.exceptions.BankException;
+import top.lanmao.computer_world.spring.service.BankService;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;

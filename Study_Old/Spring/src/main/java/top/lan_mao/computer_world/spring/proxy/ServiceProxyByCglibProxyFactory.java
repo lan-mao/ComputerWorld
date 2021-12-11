@@ -1,10 +1,10 @@
-package top.lan_mao.computer_world.spring.proxy;
+package top.lanmao.computer_world.spring.proxy;
 
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
-import top.lan_mao.computer_world.spring.service.impl.NoImplementsClass;
+import top.lanmao.computer_world.spring.service.impl.NoImplementsClass;
 
 import java.lang.reflect.Method;
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lanmao.study202110.mybatisstudy2.dao.StudentsDAO">
+    <resultMap id="students" type="Students">
+        <id column="s_id" property="sId"/>
+        <result column="s_name" property="sName"/>
+        <result column="s_age" property="sAge"/>
+        <result column="s_cid" property="sCid"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <association property="clazz" select="top.lanmao.study202110.mybatisstudy2.dao.ClassesDAO.getClassesById"
+                     column="s_cid"/>
+    </resultMap>
+
+    <select id="getStudentsById" resultMap="students">
+        select s.s_id,
+               s.s_name,
+               s.s_age,
+               s.s_cid,
+               s.create_time,
+               s.update_time
+        from mybatis_study_2021.students as s
+        where s.s_id = #{sId}
+    </select>
+
+    <resultMap id="students2" type="Students">
+        <id column="s_id" property="sId"/>
+        <result column="s_name" property="sName"/>
+        <result column="s_age" property="sAge"/>
+        <result column="s_cid" property="sCid"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="listStudentsByCourseId" resultMap="students2">
+        select t1.s_id, t1.s_name, t1.s_age, t1.s_cid, t1.create_time, t1.update_time
+        from mybatis_study_2021.students as t1
+                 inner join mybatis_study_2021.grades as t2
+                            on t1.s_id = t2.sid
+        where t2.course_id = #{courseId}
+    </select>
+</mapper>

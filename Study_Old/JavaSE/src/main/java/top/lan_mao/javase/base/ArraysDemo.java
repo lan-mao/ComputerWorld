@@ -1,4 +1,4 @@
-package top.lan_mao.javase.base;
+package top.lanmao.javase.base;
 
 import java.util.Arrays;
 

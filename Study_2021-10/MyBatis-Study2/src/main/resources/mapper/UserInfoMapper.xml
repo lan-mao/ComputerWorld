@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lanmao.study202110.mybatisstudy2.dao.UserInfoDAO">
+
+    <insert id="insertUserInfo" useGeneratedKeys="true" keyProperty="userId">
+        insert into mybatis_study_2021.user_info(user_info.user_name, user_info.user_password, user_info.user_real_name, user_info.user_img, user_info.create_time, user_info.update_time)
+        values(#{userName},#{userPassword},#{userRealName},#{userImg},#{createTime},#{updateTime})
+    </insert>
+
+    <resultMap id="userInfo" type="UserInfo">
+        <id column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_real_name" property="userRealName"/>
+        <result column="user_img" property="userImg"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <!--association用于嵌套结果映射，property表示属性名，select表示子查询的全限定名，column表示要传入的数据，若多个数据可使用"{prop1=col1,prop2=col2}"的格式-->
+        <association property="userDetail" select="top.lanmao.study202110.mybatisstudy2.dao.UserDetailDAO.getUserDetailByUserId" column="user_id"/>
+    </resultMap>
+
+    <select id="getUserInfoByUsername" resultMap="userInfo">
+        select t1.user_id,
+               t1.user_name,
+               t1.user_password,
+               t1.user_real_name,
+               t1.user_img,
+               t1.create_time,
+               t1.update_time
+        from mybatis_study_2021.user_info as t1
+        where t1.user_name = #{userName}
+    </select>
+
+</mapper>

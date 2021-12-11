@@ -1,4 +1,4 @@
-package top.lan_mao.computer_world.spring.aop;
+package top.lanmao.computer_world.spring.aop;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

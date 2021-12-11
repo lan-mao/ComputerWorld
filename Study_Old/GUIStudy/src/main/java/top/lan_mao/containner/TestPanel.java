@@ -1,4 +1,4 @@
-package top.lan_mao.containner;
+package top.lanmao.containner;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;
