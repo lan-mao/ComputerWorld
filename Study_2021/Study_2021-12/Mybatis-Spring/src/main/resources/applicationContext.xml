@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd
+">
+
+    <!--从properties文件中读取配置-->
+    <context:property-placeholder location="classpath:druid.properties"/>
+    <!--配置Druid连接池数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="${druid.url}"/>
+        <property name="driverClassName" value="${druid.driver}"/>
+        <property name="username" value="${druid.username}"/>
+        <property name="password" value="${druid.password}"/>
+
+        <property name="initialSize" value="${druid.init}"/>
+        <property name="minIdle" value="${druid.minIdle}"/>
+        <property name="maxActive" value="${druid.maxActive}"/>
+        <property name="maxWait" value="${druid.maxWait}"/>
+    </bean>
+
+    <!--通过数据源创建SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--配置数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--配置映射文件位置-->
+        <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
+        <!--启用别名-->
+        <property name="typeAliasesPackage" value="top.lanmao.computerworld.study202112.spring.mybatis.pojo"/>
+        <!--Mybatis主配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="top.lanmao.computerworld.study202112.spring.mybatis.dao"/>
+    </bean>
+
+    <!--1. 将事务管理器添加到Spring容器中-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--2. 声明使用注解进行事务配置-->
+    <context:component-scan base-package="top.lanmao.computerworld.study202112.spring.mybatis"/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+<!--    &lt;!&ndash;2. 通过tx标签声明事务管理策略&ndash;&gt;
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            &lt;!&ndash;isolation:事务的隔离级别&ndash;&gt;
+            &lt;!&ndash;propagation:事务的传播机制&ndash;&gt;
+            <tx:method name="insert*" isolation="REPEATABLE_READ"/>
+            <tx:method name="update*" isolation="REPEATABLE_READ"/>
+            <tx:method name="delete*" isolation="REPEATABLE_READ"/>
+            <tx:method name="get*" isolation="REPEATABLE_READ" propagation="SUPPORTS"/>
+            <tx:method name="list*" isolation="REPEATABLE_READ" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+    &lt;!&ndash;将事务管理类通过AOP应用到DAO中&ndash;&gt;
+    <aop:config>
+        <aop:pointcut id="crud" expression="execution(* top.lanmao.computerworld.study202112.spring.mybatis.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="crud"/>
+    </aop:config>-->
+</beans>

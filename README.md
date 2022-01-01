@@ -17,7 +17,7 @@
 - [Study系列]() 学习路上的练习题
 - [Tools](Tools) 学习时创建的一些工具类
     - [top.lanmao.tools.TestJAVE](Tools/src/main/java/top/lanmao/util/TestJAVE.java) 计算一个文件夹中的所有视频时长总和
-    - [TimeUtil](Tools/src/main/java/top/lanmao/util/TimeUtil.java) 将时间*.*转化为”*天*时*分*秒*毫秒
+    - [TimeUtil](Tools/src/main/java/top/lanmao/util/TimeUtil.java) 将时间`*.*`转化为`*天*时*分*秒*毫秒`
 - [知识图谱](resources)
     - MySql
     - 计算机大世界

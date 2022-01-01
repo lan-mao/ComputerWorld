@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd
+">
+    <!--被代理对象-->
+    <bean id="bookDao" class="top.lanmao.computerworld.study202112.spring.aop.demo.dao.BookDAOImpl"/>
+    <!--切面类-->
+    <bean id="txManager" class="top.lanmao.computerworld.study202112.spring.aop.demo.tx.TxManager"/>
+
+    <!--AOP配置-->
+    <aop:config>
+        <!--切入点配置-->
+        <!--在aop:config下是全局，在aop:aspect下是局部-->
+        <aop:pointcut id="book_all" expression="execution(* top.lanmao.computerworld.study202112.spring.aop.demo.dao.*.*(..))"/>
+        <!--切面配置-->
+        <aop:aspect ref="txManager">
+            <!--环绕通知-->
+            <!--method属性：指定通知执行的操作方法名-->
+            <!--pointcut属性指定一个切入点表达式-->
+            <aop:around method="around" pointcut="execution(* top.lanmao.computerworld.study202112.spring.aop.demo.dao.*.delete(..))"/>
+            <!--前置通知-->
+            <!--pointcut-ref属性指定一个已经存在的切入点id-->
+            <aop:before method="begin" pointcut-ref="book_all"/>
+            <!--最终通知：方法执行之后执行，无论方法是否成功执行-->
+            <aop:after method="after" pointcut-ref="book_all"/>
+            <!--后置通知：方法成功执行并返回之后执行-->
+            <!--returning：只对aop:after有效，成功执行后的返回值传入后置通知方法的形参名-->
+            <aop:after-returning method="commit" pointcut-ref="book_all" returning="returnValue"/>
+            <!--异常通知-->
+            <!--throwing：只对aop:after-throwing有效，抛出的异常传入异常通知方法的形参名-->
+            <aop:after-throwing method="rollback" pointcut-ref="book_all" throwing="e"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

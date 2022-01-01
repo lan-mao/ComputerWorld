@@ -2,26 +2,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Study_2021</artifactId>
+        <groupId>top.lan_mao.Computer_World</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.lan-mao</groupId>
-    <artifactId>ComputerWorld</artifactId>
-    <!--指定该项目为POM项目-->
+    <groupId>top.lan-mao.ComputerWorld</groupId>
+    <artifactId>Study_2021-09</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <!--项目中版本统一管理-->
+    <version>2.0.1</version>
     <modules>
-        <module>OnlineJudge</module>
-        <module>DataStructureAndAlgorithm</module>
-        <module>CompilerTheory</module>
-        <module>Tools</module>
-        <module>ScriptPlatform</module>
-        <module>Study_2021</module>
+        <module>MyBatis-Study</module>
     </modules>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
     </properties>
+
 </project>

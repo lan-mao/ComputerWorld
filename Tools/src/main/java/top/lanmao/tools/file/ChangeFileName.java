@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ChangeFileName {
     public static void main(String[] args) {
-        List<File> files = FileUtil.loopFiles("G:\\资源1\\小白网");
+        List<File> files = FileUtil.loopFiles("G:\\资源\\小白网");
         for (File file : files) {
             try {
                 String extName = FileUtil.extName(file);

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lanmao.computerworld.study202112.spring.mybatis.dao.UserInfoDAO">
+    <resultMap id="userInfoMap" type="UserInfoDO">
+        <id column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_real_name" property="userRealName"/>
+        <result column="user_img" property="userImg"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="listAllUser" resultMap="userInfoMap">
+        select user_info.user_id,
+               user_info.user_name,
+               user_info.user_password,
+               user_info.user_real_name,
+               user_info.user_img,
+               user_info.create_time,
+               user_info.update_time
+        from mybatis_study_2021.user_info
+    </select>
+</mapper>

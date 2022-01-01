@@ -1,0 +1,6 @@
+### 测试服务器响应
+
+GET http://localhost:1080
+Accept: application/json
+
+###

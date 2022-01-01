@@ -1,0 +1,18 @@
+GET http://localhost:9090
+Accept: application/json
+
+###
+# 文章接口
+GET https://mp.weixin.qq.com/cgi-bin/appmsg?action=list_ex&begin=0&count=5&fakeid=MzIxODg1OTk1MA==&type=9&query=&token=1830068476&lang=zh_CN&f=json&ajax=1
+Accept: application/json
+
+<> 2021-09-13T174649.200.json
+<> 2021-09-13T174628.200.json
+<> 2021-09-13T174620.200.json
+
+###
+
+# 公众号接口
+GET https://mp.weixin.qq.com/cgi-bin/searchbiz?action=search_biz&begin=0&count=5&query=jack%20cui&token=1830068476&lang=zh_CN&f=json&ajax=1
+
+<> 2021-09-13T180136.200.json
