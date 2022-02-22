@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lan_mao.computer_world.study_2022.ssm_demo01.dao.BookDao">
+
+    <cache/>
+
+    <insert id="insertBook" parameterType="Books">
+        insert into ssm_demo_01.books(books.book_name, books.book_count, books.book_detail)
+        values (#{bookName}, #{bookCount}, #{bookDetail})
+    </insert>
+
+    <delete id="deleteBookById" parameterType="Long">
+        delete
+        from ssm_demo_01.books
+        where books.book_id = #{bookId}
+    </delete>
+
+    <update id="updateBook" parameterType="Books">
+        update ssm_demo_01.books
+        <set>
+            <if test="bookName != null">
+                book_name = #{bookName},
+            </if>
+            <if test="bookCount != null">
+                book_count = #{bookCount},
+            </if>
+            <if test="bookDetail != null">
+                book_detail = #{bookDetail},
+            </if>
+        </set>
+        where book_id = #{bookId}
+    </update>
+
+    <resultMap id="BooksMap" type="Books">
+        <id column="book_id" property="bookId"/>
+        <result column="book_name" property="bookName"/>
+        <result column="book_count" property="bookCount"/>
+        <result column="book_detail" property="bookDetail"/>
+    </resultMap>
+
+    <select id="getBookById" resultMap="BooksMap" parameterType="Long">
+        select books.book_id, books.book_name, books.book_count, books.book_detail
+        from ssm_demo_01.books
+        where books.book_id = #{bookId}
+    </select>
+
+    <select id="listAllBooks" resultMap="BooksMap">
+        select books.book_id, books.book_name, books.book_count, books.book_detail
+        from ssm_demo_01.books
+    </select>
+
+</mapper>

@@ -14,16 +14,12 @@ import java.util.List;
  */
 public class ChangeFileName {
     public static void main(String[] args) {
-        List<File> files = FileUtil.loopFiles("G:\\资源\\小白网");
+        List<File> files = FileUtil.loopFiles("E:\\BaiduNetdiskDownload");
         for (File file : files) {
             try {
                 String extName = FileUtil.extName(file);
-                switch (extName) {
-                    case "7z": case "zip": case "rar":
-                        break;
-                    default:
-                        FileUtil.rename(file, getChangeName(file), true);
-                        break;
+                if ("".equals(extName)) {
+                    FileUtil.rename(file, getChangeName(file), true);
                 }
                 System.out.println(file.getAbsolutePath());
             } catch (Exception e) {

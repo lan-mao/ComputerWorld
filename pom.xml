@@ -17,6 +17,8 @@
         <module>Tools</module>
         <module>ScriptPlatform</module>
         <module>Study_2021</module>
+        <module>Study-2022</module>
+        <module>Snake</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

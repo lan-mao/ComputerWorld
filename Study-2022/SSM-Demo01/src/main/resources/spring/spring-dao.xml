@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+    <!--1. 关联数据库配置文件-->
+    <context:property-placeholder location="classpath:database.properties"/>
+
+    <!--2. 配置数据源：dhcp/c3p0/druid/hikari-->
+    <bean id="dataSourceByC3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="minPoolSize" value="${minPoolSize}"/>
+        <property name="maxPoolSize" value="${maxPoolSize}"/>
+        <property name="maxIdleTime" value="${c3p0.maxIdleTime}"/>
+    </bean>
+    <!--Druid连接池-->
+    <bean id="dataSourceByDruid" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="${maxPoolSize}"/>
+        <property name="minIdle" value="${maxPoolSize}"/>
+        <property name="maxEvictableIdleTimeMillis" value="${druid.maxEvictableIdleTimeMillis}"/>
+    </bean>
+    <!--HikariCP连接池-->
+    <bean id="dataSourceByHikari" class="com.zaxxer.hikari.HikariDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--connections = ((core_count * 2) + effective_spindle_count)-->
+        <property name="maximumPoolSize" value="${maxPoolSize}"/>
+        <property name="maxLifetime" value="${hikari.maxLifetime}"/>
+    </bean>
+
+
+    <!--3. 创建Session工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceByHikari"/>
+        <property name="typeAliasesPackage" value="top.lan_mao.computer_world.study_2022.ssm_demo01.pojo"/>
+        <property name="mapperLocations" value="classpath:mapper/**/*.xml"/>
+    </bean>
+
+    <!--4. 使用扫描，注入mybatis创建的DAO接口实现类-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="top.lan_mao.computer_world.study_2022.ssm_demo01.dao"/>
+    </bean>
+
+</beans>
