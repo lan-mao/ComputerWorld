@@ -40,14 +40,31 @@ public class BookController {
         return "allBook";
     }
 
-    @RequestMapping("/input")
-    public String inputBook(Books book,Model model) {
-        int i = bookService.insertBook(book);
-        if (i == 0) {
-            model.addAttribute("msg", book.getBookDetail());
-        } else{
-            model.addAttribute("msg", "失败");
-        }
-        return "result";
+
+    /**
+     * 添加书籍跳转请求
+     */
+    @RequestMapping("/toAddBook")
+    public String toAddBookPage() {
+        return "addBook";
+    }
+
+
+    @RequestMapping("/addBook")
+    public String addBook(Books book) {
+        System.out.println("books>=" + book);
+        bookService.insertBook(book);
+        return "redirect:/book/all";
+    }
+
+    @RequestMapping("/toUpdateBook")
+    public String toUpdateBook() {
+        return "updateBook";
+    }
+
+    @RequestMapping("/updateBook")
+    public String updateBook(Books book) {
+        bookService.updateBook(book);
+        return "redirect:/book/all";
     }
 }

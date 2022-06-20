@@ -12,13 +12,20 @@
 <body>
 <div class="container">
 
+    <%--设为行，清除浮动--%>
     <div class="row clearfix">
+        <%--12份栅格，设为列--%>
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
                     <small>书籍列表——显示所有</small>
                 </h1>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 column">
+            <a href="${pageContext.request.contextPath}/book/toAddBook" class="btn btn-default">增加书籍</a>
         </div>
     </div>
 
@@ -31,6 +38,7 @@
                         <th>书籍名称</th>
                         <th>书籍数量</th>
                         <th>书籍详情</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,6 +48,11 @@
                             <td>${book.bookName}</td>
                             <td>${book.bookCount}</td>
                             <td>${book.bookDetail}</td>
+                            <td>
+                                <a href="#">修改</a>
+                                &nbsp; | &nbsp;
+                                <a href="#">删除</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </tbody>
@@ -48,6 +61,5 @@
     </div>
 
 </div>
-${books}
 </body>
 </html>

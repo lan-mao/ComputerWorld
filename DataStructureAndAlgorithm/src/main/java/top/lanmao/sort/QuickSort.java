@@ -1,5 +1,8 @@
 package top.lanmao.sort;
 
+import java.util.Arrays;
+import java.util.Stack;
+
 /**
  * Create Date 2021/01/30 15:44:29 <br>
  *
@@ -147,4 +150,73 @@ public class QuickSort {
         }
         return i - 1;
     }
+
+    /**
+     * 使用栈替换递归
+     * @param array 要排序的数组
+     */
+    public static void quickSortByNoRecursion(int[] array) {
+        class Area {
+            final int left, right;
+
+            public Area(int left, int right) {
+                this.left = left;
+                this.right = right;
+            }
+        }
+        Stack<Area> temp = new Stack<>();
+        temp.push(new Area(0, array.length - 1));
+
+
+
+        // 快排思想，需要三个指针，左指针找大于分割点的，直到找到大于分割点或位置与分割点相同；右指针找小于分割点的，直到找到小于分割点或位置等于左指针
+        // 需要在栈中记录左右两区的边界，
+        while (!temp.empty()) {
+
+            Area pop = temp.pop();
+
+            // 设置模拟递归结束条件
+            if (pop.left >= pop.right) {
+                continue;
+            }
+
+            int leftPoint = pop.left;
+            int rightPoint = pop.right - 1;
+            int splitPoint = pop.right;
+
+
+            while (true) {
+                System.out.println(Arrays.toString(array));
+                while (array[leftPoint] <= array[splitPoint] && leftPoint < splitPoint) {
+                    leftPoint++;
+                }
+                while (array[rightPoint] > array[splitPoint] && rightPoint > leftPoint) {
+                    rightPoint++;
+                }
+
+                if (leftPoint < rightPoint) {
+                    int swap = array[leftPoint];
+                    array[leftPoint] = array[rightPoint];
+                    array[rightPoint] = swap;
+                } else if (leftPoint == rightPoint) {
+                    int swap = array[leftPoint];
+                    array[leftPoint] = array[splitPoint];
+                    array[splitPoint] = swap;
+
+                    temp.push(new Area(pop.left, leftPoint - 1));
+                    temp.push(new Area(leftPoint + 1, pop.right));
+
+                    break;
+                } else if (leftPoint == splitPoint) {
+                    // 此情况下除分割点位置之外，全部小于分割点
+                    // 全部大于分割点的情况，作为上一个情况处理
+                    temp.push(new Area(pop.left, pop.right - 1));
+                    break;
+                }
+            }
+
+        }
+
+    }
+
 }

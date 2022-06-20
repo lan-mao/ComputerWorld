@@ -60,13 +60,14 @@ public class SortTest {
     @DisplayName("快速排序算法")
     void quickSortByInPlace() {
         int length = 10;
-        //int[] a = new int[length];
-        //for (int i = 0; i < a.length; i++) {
-        //    a[i] = RandomUtil.randomInt(0, 100);
-        //}
-        int[] a = {99, 100, 21, 8, 9, 88, 96, 61, 87, 88};
+        int[] a = new int[length];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = RandomUtil.randomInt(0, 100);
+        }
+        //int[] a = {99, 100, 21, 8, 9, 88, 96, 61, 87, 88};
         System.out.println(Arrays.toString(a));
-        QuickSort.quickSortInPlace(a, 0, a.length - 1);
+        //QuickSort.quickSortInPlace(a, 0, a.length - 1);
+        QuickSort.quickSortByNoRecursion(a);
         System.out.println(Arrays.toString(a));
     }
 
@@ -135,5 +136,7 @@ public class SortTest {
         //StringTokenizer stringTokenizer = new StringTokenizer("");
 
     }
+
+
 
 }

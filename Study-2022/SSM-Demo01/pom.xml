@@ -15,7 +15,7 @@
         <maven.compiler.target>14</maven.compiler.target>
         <maven.compiler.source>14</maven.compiler.source>
         <junit.version>5.8.2</junit.version>
-        <spring.version>5.3.15</spring.version>
+        <spring.version>5.3.19</spring.version>
     </properties>
 
     <dependencies>
@@ -32,23 +32,11 @@
             <version>2.3.3</version>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>jstl</groupId>-->
-<!--            <artifactId>jstl</artifactId>-->
-<!--            <version>1.2</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-
-
-
-
-
-
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -58,14 +46,14 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.1</version>
+            <version>2.13.2.2</version>
         </dependency>
 
         <!--数据-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.27</version>
+            <version>8.0.29</version>
         </dependency>
         <dependency>
             <groupId>com.mchange</groupId>
@@ -75,7 +63,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.2.8</version>
+            <version>1.2.9</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
@@ -102,7 +90,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

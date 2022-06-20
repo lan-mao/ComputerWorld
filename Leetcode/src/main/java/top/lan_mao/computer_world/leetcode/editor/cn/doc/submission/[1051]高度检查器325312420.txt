@@ -1,0 +1,95 @@
+class Solution {
+    public int heightChecker(int[] heights) {
+        /*
+        想法一：
+        排序数组中的所有元素，一一对比
+        排序算法：快排
+        预期时间复杂度：O(nlogn) + O(n)
+         */
+/*
+        实现一：使用Java自带的排序算法
+        int[] sortArray = Arrays.copyOf(heights, heights.length);
+        Arrays.sort(sortArray);
+        int num = 0;
+        for (int i = 0; i < sortArray.length; i++) {
+            if (sortArray[i] != heights[i]) {
+                num++;
+            }
+        }
+        return num;
+*/
+        class Area {
+            final int left,right;
+
+            public Area(int left, int right) {
+                this.left = left;
+                this.right = right;
+            }
+        }
+        Stack<Area> temp = new Stack<>();
+        temp.push(new Area(0, heights.length - 1));
+        int[] expected = Arrays.copyOf(heights, heights.length);
+
+
+
+        // 快排思想，需要三个指针，左指针找大于分割点的，直到找到大于分割点或位置与分割点相同；右指针找小于分割点的，直到找到小于分割点或位置等于左指针
+        // 需要在栈中记录左右两区的边界，
+        while (!temp.empty()) {
+
+            Area pop = temp.pop();
+
+            // 设置模拟递归结束条件
+            if (pop.left >= pop.right) {
+                continue;
+            }
+
+            int leftPoint = pop.left;
+            int rightPoint = pop.right - 1;
+            int splitPoint = pop.right;
+
+
+            while (true) {
+                while (expected[leftPoint] <= expected[splitPoint] && leftPoint < splitPoint) {
+                    leftPoint++;
+                }
+                while (expected[rightPoint] > expected[splitPoint] && rightPoint > leftPoint) {
+                    rightPoint++;
+                }
+
+                if (leftPoint < rightPoint) {
+                    int swap = expected[leftPoint];
+                    expected[leftPoint] = expected[rightPoint];
+                    expected[rightPoint] = swap;
+                } else if (leftPoint == rightPoint) {
+                    int swap = expected[leftPoint];
+                    expected[leftPoint] = expected[splitPoint];
+                    expected[splitPoint] = swap;
+
+                    temp.push(new Area(pop.left, leftPoint - 1));
+                    temp.push(new Area(leftPoint + 1, pop.right));
+
+                    break;
+                } else if (leftPoint == splitPoint) {
+                    // 此情况下除分割点位置之外，全部小于分割点
+                    // 全部大于分割点的情况，作为上一个情况处理
+                    temp.push(new Area(pop.left, pop.right - 1));
+                    break;
+                }
+                System.out.println(Arrays.toString(expected));
+            }
+
+        }
+
+        int num = 0;
+        for (int i = 0; i < expected.length; i++) {
+            if (expected[i] != heights[i]) {
+                num++;
+            }
+        }
+        return num;
+
+    }
+}
+
+//runtime:81 ms
+//memory:41.5 MB
