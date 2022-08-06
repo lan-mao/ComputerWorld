@@ -20,6 +20,7 @@
         <module>SpringMVC-Demo06-Interceptor</module>
         <module>SpringMVC-Demo07-File</module>
         <module>SSM-Demo01</module>
+        <module>Zuo-DataStructureAndAlgorithm</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
