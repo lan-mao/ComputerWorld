@@ -1,0 +1,26 @@
+# how much memorythe emulated machine will have  
+# 单位MB
+megs: 32  
+   
+# filename of ROMimages  
+#romimage:file=/usr/local/share/bochs/BIOS-bochs-latest  
+#vgaromimage:file=/usr/local/share/bochs/VGABIOS-lgpl-latest  
+   
+# what disk imageswill be used  
+# 在bximage生成了镜像后的信息处，自动生成了该配置
+floppya: image="hello_world.img", status=inserted
+   
+# choose the bootdisk.  
+boot: floppy  
+   
+# where do we sendlog messages?  
+log: hello_world-bochsout.txt  
+   
+# disable the mouse  
+mouse: enabled=0  
+   
+# enable keymapping, using Us layout as default  
+keyboard:keymap=/usr/local/share/bochs/keymaps/x11-pc-us.map
+
+# 设置使用图形化的调试窗口
+#display_library: x, options=gui_debug
