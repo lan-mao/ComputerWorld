@@ -66,23 +66,27 @@ public class Code002_Sort {
     }
 
     public static void swapArray(int[] array, int i, int t) {
-        if (t != i) {
-            array[i] ^= array[t];
-            array[t] ^= array[i];
-            array[i] ^= array[t];
-        }
+        //if (t != i) {
+        //    array[i] ^= array[t];
+        //    array[t] ^= array[i];
+        //    array[i] ^= array[t];
+        //}
+        int tmp = array[i];
+        array[i] = array[t];
+        array[t] = tmp;
     }
 
     public static int[] generateArray(int length, int max, int min) {
+        //(int)(Math.random() * max) -> 代表的是 [0 ~ max-1] 的所有整数等概率返回一个
         int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int)( Math.random() * max + min);
+            array[i] = (int)( Math.random() * (max + 1) + min);
         }
         return array;
     }
 
     public static void main(String[] args) {
-        int[] a = generateArray(10000000, 100, 1);
+        int[] a = generateArray(100000, 100, 1);
         int[] b = {10, 100, 10};
         //System.out.println(Arrays.toString(a));
         //swapArray(b, 0, 0);

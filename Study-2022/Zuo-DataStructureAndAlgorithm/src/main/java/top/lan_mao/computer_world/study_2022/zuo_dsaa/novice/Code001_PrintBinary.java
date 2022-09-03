@@ -36,28 +36,36 @@ public class Code001_PrintBinary {
         //System.out.println(printBinary(a));
         //System.out.println(printBinary(-2));
 
-        int a = 0;
-        int b = -a;
-        int c = ~a + 1;
-        int d = ~b + 1;
-        int e = ~(a - 1);
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println(e);
+        //int a = 0;
+        //int b = -a;
+        //int c = ~a + 1;
+        //int d = ~b + 1;
+        //int e = ~(a - 1);
+        //System.out.println(a);
+        //System.out.println(b);
+        //System.out.println(c);
+        //System.out.println(d);
+        //System.out.println(e);
+        //
+        //int f = Integer.MIN_VALUE;
+        //int g = ~f + 1;
+        //int h = -f;
+        //System.out.println(f);
+        //System.out.println(g);
+        //System.out.println(h);
+        //
+        //int i = -2;
+        //int j = ~i;
+        //System.out.println(printBinary(i));
+        //System.out.println(printBinary(j));
 
-        int f = Integer.MIN_VALUE;
-        int g = ~f + 1;
-        int h = -f;
-        System.out.println(f);
-        System.out.println(g);
-        System.out.println(h);
+        int a = -10;
+        int b = a >> 1;
+        int c = a >>> 1;
 
-        int i = -2;
-        int j = ~i;
-        System.out.println(printBinary(i));
-        System.out.println(printBinary(j));
+        System.out.println(printBinary(a));
+        System.out.println(printBinary(b));
+        System.out.println(printBinary(c));
 
     }
 }
