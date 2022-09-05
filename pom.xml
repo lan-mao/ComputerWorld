@@ -4,15 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.lan-mao</groupId>
-    <artifactId>ComputerWorld</artifactId>
+    <groupId>top.lan-mao.computer_world</groupId>
+    <artifactId>computer_world</artifactId>
     <!--指定该项目为POM项目-->
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <!--项目中版本统一管理-->
     <modules>
         <module>OnlineJudge</module>
-        <module>DataStructureAndAlgorithm</module>
         <module>CompilerTheory</module>
         <module>Tools</module>
         <module>ScriptPlatform</module>
@@ -20,7 +19,6 @@
         <module>Study-2022</module>
         <module>Snake</module>
         <module>Leetcode</module>
-        <module>JavaTest</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
