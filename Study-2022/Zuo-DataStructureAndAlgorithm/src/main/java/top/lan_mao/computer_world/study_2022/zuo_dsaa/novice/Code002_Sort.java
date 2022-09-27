@@ -80,7 +80,7 @@ public class Code002_Sort {
         //(int)(Math.random() * max) -> 代表的是 [0 ~ max-1] 的所有整数等概率返回一个
         int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int)( Math.random() * (max + 1) + min);
+            array[i] = (int)( Math.random() * (max - min + 1) + min);
         }
         return array;
     }

@@ -1,7 +1,7 @@
 package top.lan_mao.computer_world.study_2022.zuo_dsaa.system;
 
 import top.lan_mao.computer_world.study_2022.zuo_dsaa.novice.Code002_Sort;
-import top.lan_mao.computer_world.study_2022.zuo_dsaa.utill.UtillTool;
+import top.lan_mao.computer_world.study_2022.zuo_dsaa.util.RandomUtil;
 
 import java.util.Arrays;
 
@@ -82,7 +82,7 @@ public class Code001_Dichotomy {
     }
 
     public static void main(String[] args) {
-        int[] array = UtillTool.generateArray(2, 100, 0);
+        int[] array = RandomUtil.generateArray(2, 100, 0);
         Code002_Sort.insertSort(array);
         System.out.println(Arrays.toString(array));
         System.out.println(findLeftmostPositionOfGreaterThanOrEqual(array, 50));

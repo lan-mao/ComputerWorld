@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.lan-mao.computer-world</groupId>
+    <groupId>top.lan-mao.computer_world.study_2022</groupId>
     <artifactId>Study-2022</artifactId>
     <packaging>pom</packaging>
     <modules>
@@ -21,6 +21,8 @@
         <module>SpringMVC-Demo07-File</module>
         <module>SSM-Demo01</module>
         <module>Zuo-DataStructureAndAlgorithm</module>
+        <module>SpringBoot</module>
+        <module>DataStructureAndAlgorithm</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
