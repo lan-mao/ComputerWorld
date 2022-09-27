@@ -43,8 +43,8 @@ artifactId是构件ID，该元素定义实际项目中的一个Maven项目或者
    4. 不同层级中的单词分割使用 `-`
 2. `groupId`
    1. 整个项目为：`top.lan-mao.computer_world`
-   2. 子项目为：`top.lan-mao.computer_world.study_2022`
-   3. 子项目中的子项目的 `groupId` 与对应父项目保持一致，为： `top.lan-mao.computer_world.study_2022`
+   2. 若二级子项目为pom类型，则为：`top.lan-mao.computer_world.study_2022`，其子项目即三级子项目与二级子项目的`groupId`一致。
+   3. 若二级项目非pom类型，则为：`top.lan-mao.computer_world`，其子项目为二级项目的`groupId` 后加上二级项目的`artifactId`。
 3. `artifactId`
    1. 整个项目：`computer_world`
    2. 子项目：`study_2022`
