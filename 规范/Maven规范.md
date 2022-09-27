@@ -39,8 +39,8 @@ artifactId是构件ID，该元素定义实际项目中的一个Maven项目或者
 1. 整体命名规范
    1. 所有字符均用小写字母、下划线 `_` 、横线 `-`
    2. 开始均为`top.lan-mao`
-   3. 同一层级中的单词等分割使用`_`
-   4. 不同层级中的单词分割使用 `-`
+   3. 同一层级中的单词等分割使用`_`，如`spring_mvc`,`computer_world`
+   4. 不同层级中的单词，且已经使用`_`分割时，使用`-`对不同层级单词之间分割，如`data_structure.data_structure-util`
 2. `groupId`
    1. 整个项目为：`top.lan-mao.computer_world`
    2. 若二级子项目为pom类型，则为：`top.lan-mao.computer_world.study_2022`，其子项目即三级子项目与二级子项目的`groupId`一致。
@@ -60,7 +60,7 @@ artifactId是构件ID，该元素定义实际项目中的一个Maven项目或者
    2. top.lan-mao.computer_world : leet_code
    3. top.lan-mao.computer_world.study_2022 : study_2022
    4. top.lan-mao.computer_world.study_2022 : mall
-   5. top.lan-mao.computer_world.study_2022.mall : mall-user
+   5. top.lan-mao.computer_world.study_2022.mall : mall_user
 
 
 
