@@ -8,11 +8,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring_boot</artifactId>
+    <artifactId>my_springboot_use</artifactId>
+    <name>MySpringBootUse</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>top.lan-mao.computer_world.study_2022</groupId>
+            <artifactId>my_springboot</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
