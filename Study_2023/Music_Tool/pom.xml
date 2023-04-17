@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>top.lan-mao.computer_world.study_2023</groupId>
+        <artifactId>study_2023</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>music_tool</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>net.jthink</groupId>
+            <artifactId>jaudiotagger</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>top.lan-mao</groupId>
+            <artifactId>Tools</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>com.groupdocs</groupId>-->
+<!--            <artifactId>groupdocs-metadata</artifactId>-->
+<!--            <version>22.2</version>-->
+<!--            &lt;!&ndash;            <type>jar</type>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <scope>system</scope>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <systemPath>${project.basedir}/src/main/resources/lib/groupdocs-metadata-22.2.jar</systemPath>    &lt;!&ndash; 使用jar所在的绝对路径 &ndash;&gt;&ndash;&gt;-->
+<!--        </dependency>-->
+
+    </dependencies>
+
+</project>
