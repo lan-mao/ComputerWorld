@@ -20,6 +20,7 @@
         <module>Study-2022</module>
         <module>Snake</module>
         <module>Leetcode</module>
+        <module>Study_2023</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

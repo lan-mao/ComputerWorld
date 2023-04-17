@@ -59,8 +59,19 @@ artifactId是构件ID，该元素定义实际项目中的一个Maven项目或者
    1. top.lan-mao.computer_world : computer_world
    2. top.lan-mao.computer_world : leet_code
    3. top.lan-mao.computer_world.study_2022 : study_2022
-   4. top.lan-mao.computer_world.study_2022 : mall
-   5. top.lan-mao.computer_world.study_2022.mall : mall_user
+   4. top.lan-mao.computer_world.study_2022 : ssm_demo01
+   5. top.lan-mao.computer_world.study_2022.mall : mall
+   6. top.lan-mao.computer_world.study_2022.mall : mall_user
+7. 项目名称规范
+   1. 项目名称与 artifactId 一致，但每个单词的首字母大写
+   2. 同级别单词之间使用首字母大写的驼峰表示，有层级关系的优先使用`_` 分隔，次要使用 `-`分隔
+8. 包名规范
+   1. `top.lan_mao.computer_world.study_2023.djl_demo_01`
+   2. 包名全部使用小写，分隔符全部使用改为`_`，多个单词之间也使用`_`
+9. **注意**
+   1. 如果单一项目需要分模块，那么其`groupId`必须与模块的`groupId`一致，如：
+      1. top.lan-mao.computer_world.study_2022.mall : mall
+      2. top.lan-mao.computer_world.study_2022.mall : mall_user
 
 
 
